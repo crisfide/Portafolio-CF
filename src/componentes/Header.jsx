@@ -1,3 +1,4 @@
+import BtnThemeSwitch from "./BtnThemeSwitch"
 import NavMenu from "./NavMenu"
 
 const itemsMenu = [
@@ -19,8 +20,9 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <NavMenu items={itemsMenu}/>
+        <NavMenu items={itemsMenu} />
       </nav>
+      <BtnThemeSwitch />
     </header>
   )
 }

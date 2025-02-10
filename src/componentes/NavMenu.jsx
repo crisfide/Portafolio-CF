@@ -2,12 +2,13 @@
 
 
 const NavMenu = ({items}) => {
-  console.log(items)
+  //console.log(items)
   return (
     <ul>
       {
-        items
-          .map( ({txt, ruta}) => <MenuItem txt={txt} ruta={ruta} />)
+        items.map( ({txt, ruta}) => (
+          <MenuItem txt={txt} ruta={ruta} key={ruta} />)
+        )
       }
     </ul>
   )
