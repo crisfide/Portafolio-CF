@@ -1,20 +1,6 @@
 import BtnThemeSwitch from "./BtnThemeSwitch"
+import { itemsMenu } from "./dataProps/itemsMenu"
 import NavMenu from "./NavMenu"
-
-const itemsMenu = [
-  {
-    txt: "Home",
-    ruta: "/"
-  },
-  {
-    txt: "Proyectos",
-    ruta: "proyectos"
-  },
-  {
-    txt: "Contacto",
-    ruta: "contacto"
-  },
-]
 
 const Header = () => {
   return (

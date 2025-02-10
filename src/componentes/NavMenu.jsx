@@ -1,6 +1,4 @@
 
-
-
 const NavMenu = ({items}) => {
   //console.log(items)
   return (
