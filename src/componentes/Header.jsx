@@ -8,11 +8,11 @@ const itemsMenu = [
   },
   {
     txt: "Proyectos",
-    ruta: "/proyectos"
+    ruta: "proyectos"
   },
   {
     txt: "Contacto",
-    ruta: "/contacto"
+    ruta: "contacto"
   },
 ]
 
