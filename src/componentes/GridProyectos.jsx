@@ -22,6 +22,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
 
   return (
     <div className="proyecto" style={estiloFondo}>
+      <div className="transparente">
         <h3>{nombre}</h3>
         <p><small>{resumen}</small></p>
 
@@ -56,8 +57,8 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
             }
 
         </ul>
+      </div>
 
-        
     </div>
   )
 }

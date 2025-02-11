@@ -60,6 +60,7 @@ nav button{
     height: 20px;
     flex-grow: 0;
     margin-left: auto; 
+    cursor: pointer;
 }
 
 /* perfil */
@@ -104,9 +105,23 @@ section{
     max-height: 300px;
     border: 1px solid black;
     text-align: center;
-    background-image: url();
+    padding: 0;
+    position: relative;
 }
-
+.carrusel .transparente{
+    height: 100%;
+    width: 100%;
+    background-color: #9a9898cc;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+}
+.proyecto h3{
+    margin-top: 10px;
+}
+.proyecto ul{
+    margin: 10px 0 0 0;
+}
 .proyecto ul{
     list-style: none;
     display: flex;
@@ -123,6 +138,9 @@ section{
 
 
 /* footer */
+footer{
+    padding-bottom: 50px;
+}
 footer a:hover{
     font-weight: bold;
 }
