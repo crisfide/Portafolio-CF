@@ -7,8 +7,8 @@ const Header = () => {
     <header>
       <nav>
         <NavMenu items={itemsMenu} />
+        <BtnThemeSwitch />
       </nav>
-      <BtnThemeSwitch />
     </header>
   )
 }

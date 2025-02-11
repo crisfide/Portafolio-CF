@@ -1,6 +1,74 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: 60px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: none;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+/* nav */
+header{
+    background-color: #DDDDDDCC;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    height: 20px;
+    top: 0;
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    flex-grow: 1; 
+    width: 100%;
+    align-items: center;
+}
+nav ul{
+    width: 90%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+nav li a {
+    padding: 5px;
+}
+nav li a:hover {
+    font-weight: bold;
+}
+
+nav button{
+    width: 10%;
+    height: 20px;
+    flex-grow: 0;
+    margin-left: auto; 
+}
 
 /* perfil */
+main{
+    margin: 10px;
+}
+section{
+    padding-bottom: 30px;
+}
 .perfil{
     display: flex;
 }
@@ -8,6 +76,21 @@
     max-width: 200px;
 }
 
+.btn{
+    text-decoration: none;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 15%;
+}
+.btn:hover{
+    background-color: rgb(0, 73, 0);
+    color: white;
+
+}
+
+
+/* carrusel */
 .carrusel{
     display: flex;
     flex-direction: row;
@@ -33,4 +116,23 @@
 }
 .proyecto li a {
     padding: 5px;
+}
+.proyecto li a:hover {
+    font-weight: bold;
+}
+
+
+/* footer */
+footer a:hover{
+    font-weight: bold;
+}
+.share-link {
+    display: inline-flex;
+    align-items: center;
+}
+.share-link svg {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }

@@ -1,13 +1,13 @@
 
 const GridProyectos = ({proyectos}) => {
   return (
-    <div className="carrusel">
+    <section className="carrusel" id="proyectos">
       {
         proyectos.map( proyecto => (
           <ProyectoItem {...proyecto} key={proyecto.nombre} />)
         )
       }
-    </div>
+    </section>
   )
 }
 

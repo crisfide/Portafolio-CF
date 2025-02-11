@@ -1,14 +1,8 @@
+const crearMenuItem = (txt, ruta) => ({ txt, ruta });
+
 export const itemsMenu = [
-  {
-    txt: "Home",
-    ruta: ""
-  },
-  {
-    txt: "Proyectos",
-    ruta: "proyectos"
-  },
-  {
-    txt: "Contacto",
-    ruta: "contacto"
-  },
+  crearMenuItem("Home", "#"),
+  crearMenuItem("Proyectos", "#proyectos"),
+  crearMenuItem("Contacto", "#contacto"),
 ];
+
