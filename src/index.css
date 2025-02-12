@@ -86,6 +86,9 @@ section{
 .perfil{
     display: flex;
 }
+.perfil figure{
+    text-align: center;
+}
 .perfil img{
     max-width: 200px;
 }
@@ -191,3 +194,14 @@ footer a:hover{
         border-color: #223;
     }
 /* } */
+
+
+@media screen and (max-width: 800px) {
+    .perfil{
+        flex-direction: column;
+    }
+        
+    .perfil figure{
+        margin-top: 50px;
+    }
+}

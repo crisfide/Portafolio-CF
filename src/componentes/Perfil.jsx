@@ -1,11 +1,9 @@
-export const Perfil = () => {
+export const Perfil = ( {sobreMi:{titulo,descripcion}} ) => {
   return (
     <section className="perfil">
       <div>
-        <h1>Hola, soy Christian, desarrollador Jr.</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, accusantium? Repellat, commodi praesentium. Tenetur, unde id? Voluptate similique sint maxime dolores quisquam odit quia eos, itaque inventore aperiam veniam eaque.
-        </p>
+        <h1>{titulo}</h1>
+        <p>{descripcion}</p>
         <a href="assets/cv_Christian_Fidelio.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
 
       </div>
