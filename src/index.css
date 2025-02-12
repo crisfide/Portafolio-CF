@@ -6,6 +6,9 @@ body{
     padding-top: 60px;
     transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
+/*#root{
+    ;
+} */
 a{
     text-decoration: none;
     color: black;
@@ -27,10 +30,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 80vw;
     padding: 20px 0;
     height: 20px;
     top: 0;
+    left: 10vw;
     z-index: 1000;
 }
 nav{
@@ -60,7 +64,7 @@ nav button{
     width: 30px;
     height: 30px;
     flex-grow: 0;
-    margin-left: auto; 
+    margin: auto; 
     cursor: pointer;
     border-radius: 50%;
     background-color: #223;
@@ -190,6 +194,23 @@ footer a:hover{
     fill: currentColor;
 }
 
+/* barra de desplazamiento*/
+::-webkit-scrollbar {
+    width: 12px;  
+    height: 7.5px; 
+}
+::-webkit-scrollbar-track {
+    background: #ddd; 
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #a89fe9;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #648ade;
+}
+
 
 /* @media (prefers-color-scheme: dark){ */
     body.dark{
@@ -212,6 +233,15 @@ footer a:hover{
     }
     .dark .fa-brands,.dark .fa-solid{
         color: white;
+    }
+    .dark::-webkit-scrollbar-track, .dark ::-webkit-scrollbar-track {
+        background: #282832; 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #696393;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #435b95;
     }
 /* } */
 
