@@ -1,13 +1,19 @@
-import { useState } from "react";
+import dark from "../svg/dark.svg"
+import light from "../svg/light.svg"
+import { useContext } from "react"
+import { DarkContext } from "./DarkContext"
+
 
 const BtnThemeSwitch = () => {
-  let modoOscuroSistema = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  const [darkMode, setDarkMode] = useState(modoOscuroSistema);
-  
+  //const { darkMode, cambiarTema } = useDarkMode()
+  const { darkMode, cambiarTema } = useContext(DarkContext)
+
   return (
-    <button onClick={()=>setDarkMode(!darkMode)}>
-      Modo oscuro {darkMode.toString()}
-    </button>
+      <button onClick={cambiarTema}>
+        <img src={darkMode ? light : dark} alt="Tema" 
+          title={`Cambiar a modo ${darkMode?"claro":"oscuro"}`} />
+
+      </button>
   )
 }
 

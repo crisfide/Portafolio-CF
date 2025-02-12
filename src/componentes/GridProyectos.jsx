@@ -1,3 +1,5 @@
+import { useState, useEffect, useContext } from "react"
+import { DarkContext } from "./DarkContext"
 
 const GridProyectos = ({proyectos}) => {
   return (
@@ -12,11 +14,16 @@ const GridProyectos = ({proyectos}) => {
 }
 
 const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen}) => {
-  const imagen2 = "assets/fotoPerfil.jpg" //prueba
+  const { darkMode } = useContext(DarkContext)
+  const [img, setImg] = useState(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.jpg`);
+  useEffect(() => {
+    setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.jpg`);
+  }, [darkMode]);
+
   const estiloFondo = {
-        backgroundImage: `url(${imagen2})`,
+        backgroundImage: `url(${img})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
         height: "100vh",
     };
 
