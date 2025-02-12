@@ -211,6 +211,10 @@ footer a:hover{
     background: #648ade;
 }
 
+button, .btn, footer, ul{
+    user-select: none;
+}
+
 
 /* @media (prefers-color-scheme: dark){ */
     body.dark{
@@ -246,12 +250,22 @@ footer a:hover{
 /* } */
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1001px) {
+    header{
+        width: 100%;
+        left: 0;
+        font-size: 4vw;
+    }
     .perfil{
         flex-direction: column;
+        font-size: 4vw;
     }
         
     .perfil figure{
         margin-top: 50px;
+    }
+
+    .carrusel{
+        font-size: 3vw;
     }
 }
