@@ -36,7 +36,7 @@ const crearProyecto = (nombre, resumen, descripcion, tecnologias, linkWeb, linkG
        - Autenticación con Google.
        - Base de datos en Azure.
        - Interfaz con Bootstrap y JavaScript.`,
-      ["C#", ".NET", "OAuth 2.0", "Azure", "Bootstrap", "Git"],
+      ["C#", ".NET", "OAuth2", "Azure", "Bootstrap", "Git"],
       null,
       "https://github.com/crisfide/HeladeriaTP-UNLZ",
       ""
@@ -52,7 +52,7 @@ const crearProyecto = (nombre, resumen, descripcion, tecnologias, linkWeb, linkG
        - Calcular total de la compra.
        - Simulación de checkout.
        Tecnologías usadas: Backend en Java, Frontend en HTML/CSS/JS, servidor Apache Tomcat.`,
-      ["Java", "Apache Tomcat", "Bootstrap", "Git"],
+      ["Java", "Tomcat", "Bootstrap", "Git"],
       null,
       "https://github.com/crisfide/CarritoTP-UNLZ",
       ""

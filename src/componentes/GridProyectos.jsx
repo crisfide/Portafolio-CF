@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { DarkContext } from "./DarkContext"
+import './iconos.css'
 
 const GridProyectos = ({proyectos}) => {
   return (
@@ -31,39 +32,45 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
     <div className="proyecto" style={estiloFondo}>
       <div className="transparente">
         <h3>{nombre}</h3>
-        <p><small>{resumen}</small></p>
+        <div>
+          <p><small>{resumen}</small></p>
+          <a href="#" className="btn">+ detalles</a>
+        </div>
 
-        <a href="#" className="btn">+ detalles</a>
-
-        <ul>
+        <div>
+          <ul>
             {
-                tecnologias.map( tec => (
+              tecnologias.map( tec => (
                 <li key={tec}>
-                    <a href="#" className="tec" title={tec}>
-                        <i className={tec+"-link"}>A</i>
-                    </a>
+                  <a href="#" className="tec" title={tec}>
+                    <i className={`devicon-${obtenerIcono(tec)}-plain colored`}></i>
+                    <br />
+                    <code><small>{tec}</small></code>
+                  </a>
                 </li>)
-                )
+              )
             }            
-        </ul>
+          </ul>
 
-        <ul>
+          <ul>
             <li>
-                <a href={linkGithub} target="_blank">
-                    <i className="github-link">A</i>
-                </a>
+              <a href={linkGithub} target="_blank" title="Ver en Github">
+                <i className="fa-brands fa-github"></i>
+              </a>
             </li>
             {
-                (linkWeb) ?
-                    <li>
-                        <a href={linkWeb} target="_blank">
-                            <i className="web-link">A</i>
-                        </a>
-                    </li>
-                :null
+              (linkWeb) ?
+              <li>
+                <a href={linkWeb} target="_blank">
+                  <i className="fa-solid fa-link"></i>
+                </a>
+              </li>
+              :null
             }
 
-        </ul>
+          </ul>
+
+        </div>
       </div>
 
     </div>
@@ -72,3 +79,25 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
 
 
 export default GridProyectos
+
+
+
+const obtenerIcono = tec => {
+  const tecLower = tec.toLowerCase()
+  switch (tecLower) {
+    case "html":
+      return "html5"
+    case "css":
+      return "css3"  
+    case ".net":
+      return "dot-net" 
+    case "c#":
+      return "csharp" 
+    case "oauth2":
+      return "oauth" 
+    case "tomcat":
+      return "tomcat-line" 
+    default:
+      return tecLower;
+  }
+}

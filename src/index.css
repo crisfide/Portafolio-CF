@@ -131,12 +131,16 @@ section{
     top: 0;
     position: absolute;
     overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 10px;
 }
 .proyecto h3{
-    margin-top: 10px;
+    margin: 1rem auto;
 }
 .proyecto ul{
-    margin: 10px 0 0 0;
+    margin: 20px 0 0 0;
 }
 .proyecto ul{
     list-style: none;
@@ -145,11 +149,24 @@ section{
     justify-content: space-around;
     padding: 0;
 }
+.proyecto ul:first-child{
+    margin-top: 50px;
+}
 .proyecto li a {
     padding: 5px;
 }
 .proyecto li a:hover {
     font-weight: bold;
+}
+.fa-brands, .fa-solid{
+    color: #222;    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.fa-brands::before, .fa-solid::before{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -192,6 +209,9 @@ footer a:hover{
     .dark nav button {    
         background-color: #ccc;
         border-color: #223;
+    }
+    .dark .fa-brands,.dark .fa-solid{
+        color: white;
     }
 /* } */
 

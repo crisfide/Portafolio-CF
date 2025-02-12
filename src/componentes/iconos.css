@@ -1,0 +1,12 @@
+.fa-kotlin::before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><defs><linearGradient id="kotlinGradient1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%23EA4C89"/><stop offset="100%" stop-color="%23FC883A"/></linearGradient><linearGradient id="kotlinGradient2" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="%23B125EA"/><stop offset="100%" stop-color="%237F52FF"/></linearGradient></defs><polygon points="0,0 256,0 0,256" fill="url(%23kotlinGradient1)"/><polygon points="128,128 256,0 256,256" fill="url(%23kotlinGradient2)"/></svg>');
+
+    transform: rotate(-90deg);
+}
+.devicon-tomcat-line-plain::before{
+    content: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tomcat/tomcat-original.svg');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+  
