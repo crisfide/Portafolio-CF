@@ -4,18 +4,22 @@ export const useBurgerMenu = e => {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
-    document.getElementById("burgerIcon").classList.toggle("fa-bars")
-    document.getElementById("burgerIcon").classList.toggle("fa-x")
-    document.querySelectorAll("nav ul li.pc").forEach(li => {
-      li.classList.toggle("visible")
+    const burgerIcon = document.getElementById("burgerIcon");
+    const ul = document.querySelector("nav ul");
+    const items = document.querySelectorAll("nav ul li.pc");
+
+    burgerIcon.classList.toggle("fa-bars", !menu)
+    burgerIcon.classList.toggle("fa-x", menu)
+    items.forEach(li => {
+      li.classList.toggle("visible", menu)
     })    
-    document.querySelector("nav ul").classList.toggle("expand")
+    ul.classList.toggle("expand", menu)
 
   }, [menu]);
 
   const toggleMenu = e => {
     e.preventDefault()
-    setMenu(!menu)
+    setMenu(anterior => !anterior)
   }
 
   return { menu, toggleMenu };

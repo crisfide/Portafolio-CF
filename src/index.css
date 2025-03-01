@@ -3,6 +3,7 @@ html, body{
     padding: 0;
 }
 body{
+    font-family: sans-serif;
     padding-top: 60px;
     transition: background-color 1s ease-in-out, color 1s ease-in-out;
 }
@@ -282,7 +283,7 @@ button, .btn, footer, ul{
     header{
         width: 100%;
         left: 0;
-        font-size: clamp(16px,5vw,25px); 
+        font-size: clamp(16px,4vh,35px);  
         height: auto;
     }
     nav ul{
@@ -290,6 +291,10 @@ button, .btn, footer, ul{
     }
     nav button{
         margin-top: 0;
+    }
+
+    main{
+        padding: 10px 10vw;
     }
     .perfil{
         flex-direction: column;
@@ -301,7 +306,7 @@ button, .btn, footer, ul{
     }
 
     .carrusel{
-        font-size: clamp(16px,6vw,25px);
+        font-size: clamp(16px,3vh,25px);
     }
     .carrusel .proyecto{
         min-width: 85%;
