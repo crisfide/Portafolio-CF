@@ -182,6 +182,25 @@ section{
     height: 16px;
 }
 
+/* proyectoDetalle */
+.proyecto-detalle p{
+    white-space:pre-wrap;
+}
+.tecs-proy ul, .links-proy ul{
+    flex-direction: column;
+    align-items: start;
+    padding-left: 0;
+    min-width: 50%;
+}
+.tecs-proy ul li, .links-proy ul li{
+    border: 1px solid #8888;
+    padding: 1rem 0.5rem;
+    width: 100%;
+}
+.img-proy img{
+    max-width: 300px;
+}
+
 
 /* footer */
 footer{

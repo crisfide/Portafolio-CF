@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useBurgerMenu } from "../hooks/useBurgerMenu"
 
 
@@ -24,7 +25,8 @@ const NavMenu = ({items}) => {
 const MenuItem = ({txt, ruta}) => {
   return (
     <li className="pc">
-      <a href={ruta}>{txt}</a>
+      {/* <a href={ruta}>{txt}</a> */}
+      <Link to={ruta}>{txt}</Link>
     </li>
   )
 }

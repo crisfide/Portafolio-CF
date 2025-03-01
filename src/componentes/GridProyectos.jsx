@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from "react"
 import { DarkContext } from "./DarkContext"
 import './iconos.css'
+import { Link } from "react-router-dom"
+import { obtenerIcono } from "./obtenerIcono"
 
 const GridProyectos = ({proyectos}) => {
   return (
@@ -34,7 +36,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
         <h3>{nombre}</h3>
         <div>
           <p><small>{resumen}</small></p>
-          <a href="#" className="btn">+ detalles</a>
+          <Link to={`/proyectos/${nombre}`} className="btn">+ detalles</Link>
         </div>
 
         <div>
@@ -61,7 +63,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
             {
               (linkWeb) ?
               <li>
-                <a href={linkWeb} target="_blank">
+                <a href={linkWeb} target="_blank" title="Acceder al proyecto">
                   <i className="fa-solid fa-link"></i>
                 </a>
               </li>
@@ -82,22 +84,4 @@ export default GridProyectos
 
 
 
-const obtenerIcono = tec => {
-  const tecLower = tec.toLowerCase()
-  switch (tecLower) {
-    case "html":
-      return "html5"
-    case "css":
-      return "css3"  
-    case ".net":
-      return "dot-net" 
-    case "c#":
-      return "csharp" 
-    case "oauth2":
-      return "oauth" 
-    case "tomcat":
-      return "tomcat-line" 
-    default:
-      return tecLower;
-  }
-}
+
