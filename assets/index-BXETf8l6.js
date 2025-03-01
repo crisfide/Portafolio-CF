@@ -53,13 +53,13 @@ Error generating stack: `+u.message+`
        - Actualización en tiempo real.
        - Filtros y búsqueda de acciones.
        - Gráficos históricos (próximamente).
-       - Panel de favoritos personalizable.`,["Kotlin","Android"],null,"https://github.com/crisfide/ArgyView",""),ui("Proyecto heladería C# ASP.NET UNLZ","Sistema web para la gestión de una heladería, implementando MVC e inyección de dependencias.",`Este proyecto, desarrollado en C# con ASP.NET, consiste en un sistema web para la gestión de una heladería... 
+       - Panel de favoritos personalizable.`,["Kotlin","Android"],null,"https://github.com/crisfide/ArgyView",""),ui("Heladería UNLZ","Sistema web para la gestión de una heladería, implementando MVC e inyección de dependencias.",`Este proyecto, desarrollado en C# con ASP.NET, consiste en un sistema web para la gestión de una heladería... 
        Funcionalidades:
        - Gestión de productos.
        - Pedidos en línea.
        - Autenticación con Google.
        - Base de datos en Azure.
-       - Interfaz con Bootstrap y JavaScript.`,["C#",".NET","OAuth2","Azure","Bootstrap","Git"],null,"https://github.com/crisfide/HeladeriaTP-UNLZ",""),ui("Proyecto Carrito de compras Java UNLZ","Carrito de compras web desarrollado en Java con MVC para la UNLZ.",`Proyecto grupal desarrollado en Java con servlets y JSP... 
+       - Interfaz con Bootstrap y JavaScript.`,["C#",".NET","OAuth2","Azure","Bootstrap","Git"],null,"https://github.com/crisfide/HeladeriaTP-UNLZ",""),ui("Carrito de compras UNLZ","Carrito de compras web desarrollado en Java con MVC para la UNLZ.",`Proyecto grupal desarrollado en Java con servlets y JSP... 
        Funcionalidades:
        - Agregar productos al carrito.
        - Modificar y eliminar productos.
