@@ -16,7 +16,7 @@ const RedesSoc = ({items}) => {
 const RedSocialItem = ({txt, ruta}) => {
   return (
     <li>
-      <a href={ruta} target="_blank" title={txt}>{txt}</a>
+      <a href={ruta} target="_blank" rel="noopener noreferrer" title={txt}>{txt}</a>
     </li>
   )
 }

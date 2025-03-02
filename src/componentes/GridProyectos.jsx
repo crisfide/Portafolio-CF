@@ -33,10 +33,12 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
   return (
     <div className="proyecto" style={estiloFondo}>
       <div className="transparente">
-        <h3>{nombre}</h3>
         <div>
-          <p><small>{resumen}</small></p>
-          <Link to={`/proyectos/${nombre}`} className="btn">+ detalles</Link>
+          <h3>{nombre}</h3>
+          <div>
+            <p><small>{resumen}</small></p>
+            <Link to={`/proyectos/${nombre}`} className="btn">+ detalles</Link>
+          </div>
         </div>
 
         <div>

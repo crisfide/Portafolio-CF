@@ -6,8 +6,8 @@ const NavMenu = ({items}) => {
   const {toggleMenu} = useBurgerMenu()
 
   return (
-    <ul>
-      <li className="celular" onClick={toggleMenu}>
+    <ul onClick={toggleMenu}>
+      <li className="celular">
         <a href="#">
           <i className="fa-solid fa-bars" id="burgerIcon"></i>
         </a>
