@@ -8,19 +8,18 @@ import { DarkContext } from "./DarkContext"
 const Proyecto = () => {
   const {nombre} = useParams()
   const proyecto = proyectos.find(p=>p.nombre===nombre)
-  
   //console.log(proyecto)
   if (!proyecto) return (
     <main>
-        <h2>No existe el proyecto {nombre}</h2>
-        <ListaProyectos proyectos={proyectos} />
+      <h2>No existe el proyecto {nombre}</h2>
+      <ListaProyectos proyectos={proyectos} />
     </main>
   )
-
+  
   const { darkMode } = useContext(DarkContext)
-  const [img, setImg] = useState(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}.jpg`);
+  const [img, setImg] = useState(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
   useEffect(() => {
-    setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}.jpg`);
+    setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
   }, [darkMode]);
   
   return (
@@ -38,36 +37,37 @@ const Proyecto = () => {
         <h3>Tecnologías utilizadas:</h3>
         <ul>
         {
-            proyecto.tecnologias.map( tec => (
-            <li key={tec}>
-                <a href="#" className="tec" title={tec}>
-                    <i className={`devicon-${obtenerIcono(tec)}-plain colored`}></i>
-                    <code>{tec}</code>
-                </a>
-            </li>)
-            )
+          proyecto.tecnologias.map( tec => (
+          <li key={tec}>
+            <span className="tec" title={tec}>
+              <i className={`devicon-${obtenerIcono(tec)}-plain colored`}></i>
+              <code> {tec}</code>
+            </span>
+          </li>)
+          )
         }            
         </ul>
       </section>
 
       <section className="links-proy">
 
-
         <ul>
+          <li>
+            <a href={proyecto.linkGithub} target="_blank" rel="noopener noreferrer" title="Ver en Github">
+              <i className="fa-brands fa-github"></i>
+              <span>  Ver en Github</span> 
+            </a>
+          </li>
+          {
+            (proyecto.linkWeb) ?
             <li>
-                <a href={proyecto.linkGithub} target="_blank" title="Ver en Github">
-                    <i className="fa-brands fa-github"></i> Ver en Github 
-                </a>
+              <a href={proyecto.linkWeb} target="_blank" rel="noopener noreferrer" title="Acceder al proyecto">
+                <i className="fa-solid fa-link"></i> 
+                <span>  Acceder al proyecto</span>
+              </a>
             </li>
-            {
-                (proyecto.linkWeb) ?
-                <li>
-                    <a href={proyecto.linkWeb} target="_blank" title="Acceder al proyecto">
-                        <i className="fa-solid fa-link"></i> Acceder al proyecto
-                    </a>
-                </li>
-                :null
-            }
+            :null
+          }
 
         </ul>
 
@@ -75,7 +75,8 @@ const Proyecto = () => {
       </section>
 
       <section className="img-proy">
-        <img src={img} alt={`Imagen del proyecto ${proyecto.nombre}`} />
+        
+        <img src={`${img}.jpg`} alt={`Imagen del proyecto ${proyecto.nombre}`} />
 
       </section>
 
