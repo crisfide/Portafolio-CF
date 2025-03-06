@@ -5,6 +5,18 @@ import { obtenerIcono } from "./obtenerIcono"
 import { useContext, useEffect, useState } from "react"
 import { DarkContext } from "./DarkContext"
 
+const existeImg = async url => {
+  try {
+    const response = await fetch(url, { method: "HEAD" });
+    const blob = await response.blob()
+    return blob.type === "image/jpeg"
+  } catch (error) {
+    return false
+  }
+}
+
+
+
 const Proyecto = () => {
   const {nombre} = useParams()
   const proyecto = proyectos.find(p=>p.nombre===nombre)
@@ -18,10 +30,31 @@ const Proyecto = () => {
   
   const { darkMode } = useContext(DarkContext)
   const [img, setImg] = useState(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
+  const [arrImg, setArrImg] = useState([`${img}.jpg`])
+  
   useEffect(() => {
     setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
   }, [darkMode]);
   
+  useEffect(() => {
+    const getImgs  = async () => {
+      let arr = [`${img}.jpg`]
+
+      for (let i = 2; i < 10; i++) {
+        let url = `${img} (${i}).jpg`
+        const existe = await existeImg(url)
+          
+        if (!existe) 
+          break
+        
+        arr.push(url)
+      }
+      setArrImg(arr)
+    }
+
+    getImgs()
+  }, [img]);
+
   return (
     <main className="proyecto-detalle">
       <section>
@@ -76,7 +109,14 @@ const Proyecto = () => {
 
       <section className="img-proy">
         
-        <img src={`${img}.jpg`} alt={`Imagen del proyecto ${proyecto.nombre}`} />
+        
+        {
+          arrImg.map((img, i) => (
+            <a href={img} target="_blank">
+              <img src={img} alt={`Imagen ${i} del proyecto ${proyecto.nombre}`} key={i} />
+            </a>
+          ))
+        }
 
       </section>
 

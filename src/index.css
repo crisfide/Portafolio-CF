@@ -185,6 +185,9 @@ section{
 }
 
 /* proyectoDetalle */
+.proyecto-detalle section{
+    padding-bottom: 50px;
+}
 .proyecto-detalle p{
     white-space: pre-wrap;
 }
@@ -211,8 +214,16 @@ section{
     text-shadow: 2px 2px 5px gray;
 }
 
+.img-proy{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .img-proy img{
-    max-width: 300px;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 
