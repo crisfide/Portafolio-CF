@@ -4,6 +4,7 @@ import ListaProyectos from "./ListaProyectos"
 import { obtenerIcono } from "./obtenerIcono"
 import { useContext, useEffect, useState } from "react"
 import { DarkContext } from "./DarkContext"
+import Img from "./Img"
 
 const existeImg = async url => {
   try {
@@ -112,9 +113,7 @@ const Proyecto = () => {
         
         {
           arrImg.map((img, i) => (
-            <a href={img} target="_blank">
-              <img src={img} alt={`Imagen ${i} del proyecto ${proyecto.nombre}`} key={i} />
-            </a>
+            <Img src={img} alt={`Imagen ${i} del proyecto ${proyecto.nombre}`} key={i} />
           ))
         }
 
