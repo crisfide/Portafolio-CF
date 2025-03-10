@@ -35,7 +35,7 @@ Funcionalidades:
   ),
 
   crearProyecto(
-    "Heladería UNLZ",
+    "Heladería_UNLZ",
     "Sistema web para la gestión de una heladería, implementando MVC e inyección de dependencias.",
     `Este proyecto, desarrollado en C# con ASP.NET, consiste en un sistema web para la gestión de una heladería... 
 

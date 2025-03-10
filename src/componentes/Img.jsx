@@ -36,11 +36,7 @@ const ModalPortalImg = ({ children, isOpen, close }) => {
 
 
   const cerrar = (e) => {
-    if (
-      e.target.tagName === "ARTICLE" ||
-      e.target.className === "modal-close" ||
-      e.target.className === "fa-solid fa-x"
-    ) {
+    if ( e.target.tagName !== "IMG" ) {
       close();
     }
   };

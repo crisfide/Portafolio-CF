@@ -5,18 +5,7 @@ import { obtenerIcono } from "./obtenerIcono"
 import { useContext, useEffect, useState } from "react"
 import { DarkContext } from "./DarkContext"
 import Img from "./Img"
-
-const existeImg = async url => {
-  try {
-    const response = await fetch(url, { method: "HEAD" });
-    const blob = await response.blob()
-    return blob.type === "image/jpeg"
-  } catch (error) {
-    return false
-  }
-}
-
-
+import { existeImg } from "../helpers/existeImg"
 
 const Proyecto = () => {
   const {nombre} = useParams()
@@ -30,11 +19,27 @@ const Proyecto = () => {
   )
   
   const { darkMode } = useContext(DarkContext)
-  const [img, setImg] = useState(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
+  const [img, setImg] = useState("");
   const [arrImg, setArrImg] = useState([`${img}.jpg`])
   
   useEffect(() => {
-    setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
+    const getImgInicial = async () => {
+      const urlDark = `assets/img/dark/${proyecto.nombre}`
+      const urlLight = `assets/img/${proyecto.nombre}`
+            
+      if (darkMode) {
+        const existeImgDark = await existeImg(urlDark+".jpg")
+        if (existeImgDark) {
+          setImg(urlDark)
+          return
+        }
+      }
+
+      setImg(urlLight)
+    }
+    getImgInicial()
+
+    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
   }, [darkMode]);
   
   useEffect(() => {

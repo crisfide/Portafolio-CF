@@ -12,11 +12,10 @@ body.modal-open {
   display: none;
   backdrop-filter: blur(3px);
   overflow: auto;
-
+  
 }
 .modal-back.is-open {
   display: flex;
-  justify-content: center;
 }
 
 .modal-container {
@@ -35,24 +34,31 @@ body.modal-open {
   position: relative;  
   max-height: 90vh;
   max-width: 90vw;
+  margin: auto;
 }
 .modal-img-container>img{
   max-height: 90vh;
   max-width: 90vw;
   cursor: zoom-in;
+  user-select: none;
 }
 
 .modal-img-container.zoomed{
   min-height:fit-content;
   min-width:fit-content;
 
-  max-height: none;
-  max-width: none;
+  max-height: fit-content;
+  max-width: fit-content;
+}
+.modal-img-container.zoomed>img{
+  cursor: zoom-out;
 }
 .modal-img-container.zoomed>img.horizontal{
+  min-height: max(90vh,500px);
   max-width: none;
 }
 .modal-img-container.zoomed>img.vertical{
+  min-width: max(90vw,500px);
   max-height: none;
 }
 

@@ -3,6 +3,7 @@ import { DarkContext } from "./DarkContext"
 import './iconos.css'
 import { Link } from "react-router-dom"
 import { obtenerIcono } from "./obtenerIcono"
+import { existeImg } from "../helpers/existeImg"
 
 const GridProyectos = ({proyectos}) => {
   return (
@@ -18,9 +19,25 @@ const GridProyectos = ({proyectos}) => {
 
 const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen}) => {
   const { darkMode } = useContext(DarkContext)
-  const [img, setImg] = useState(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.jpg`);
+  const [img, setImg] = useState("");
   useEffect(() => {
-    setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.jpg`);
+    const getImgInicial = async () => {
+      const urlDark = `assets/img/dark/${nombre}.jpg`
+      const urlLight = `assets/img/${nombre}.jpg`
+            
+      if (darkMode) {
+        const existeImgDark = await existeImg(urlDark)
+        if (existeImgDark) {
+          setImg(urlDark)
+          return
+        }
+      }
+
+      setImg(urlLight)
+    }
+    getImgInicial()
+
+    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.jpg`);
   }, [darkMode]);
 
   const estiloFondo = {
