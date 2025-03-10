@@ -7,13 +7,18 @@ import { existeImg } from "../helpers/existeImg"
 
 const GridProyectos = ({proyectos}) => {
   return (
-    <section className="carrusel" id="proyectos">
-      {
-        proyectos.map( proyecto => (
-          <ProyectoItem {...proyecto} key={proyecto.nombre} />)
-        )
-      }
-    </section>
+    <>
+      <h2 className="mt">Proyectos en los que he trabajado</h2>
+      <section className="carrusel" id="proyectos">
+        
+
+        {
+          proyectos.map( proyecto => (
+            <ProyectoItem {...proyecto} key={proyecto.nombre} />)
+          )
+        }
+      </section>
+    </>
   )
 }
 
@@ -51,7 +56,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
     <div className="proyecto" style={estiloFondo}>
       <div className="transparente">
         <div>
-          <h3>{nombre}</h3>
+          <h3>{nombre.replaceAll("_"," ")}</h3>
           <div>
             <p><small>{resumen}</small></p>
             <Link to={`/proyectos/${nombre}`} className="btn">+ detalles</Link>
@@ -63,11 +68,11 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
             {
               tecnologias.map( tec => (
                 <li key={tec}>
-                  <a href="#" className="tec" title={tec}>
+                  <span className="tec" title={tec}>
                     <i className={`devicon-${obtenerIcono(tec)}-plain colored`}></i>
                     <br />
                     <code><small>{tec}</small></code>
-                  </a>
+                  </span>
                 </li>)
               )
             }            

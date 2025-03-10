@@ -37,7 +37,11 @@ Funcionalidades:
   crearProyecto(
     "Heladería_UNLZ",
     "Sistema web para la gestión de una heladería, implementando MVC e inyección de dependencias.",
-    `Este proyecto, desarrollado en C# con ASP.NET, consiste en un sistema web para la gestión de una heladería... 
+    `Este proyecto, desarrollado en C# con ASP.NET, consiste en un sistema web para la gestión de una heladería, incluyendo un CRUD de sabores de helado, una página para realizar pedidos, distinguiendo rol de usuario administrador y cliente. 
+
+Se utiliza una base de datos compartida en Azure. 
+    
+Los usuarios deben ingresar con su cuenca de Google, con la cual se realiza la autenticación con aprovechando la tecnología OAuth 2.0.
 
 Funcionalidades:
   - Gestión de productos.
@@ -52,15 +56,19 @@ Funcionalidades:
   ),
 
   crearProyecto(
-    "Carrito de compras UNLZ",
+    "Carrito_de_compras_UNLZ",
     "Carrito de compras web desarrollado en Java con MVC para la UNLZ.",
-    `Proyecto grupal desarrollado en Java con servlets y JSP... 
+    `Proyecto grupal desarrollado en Java con servlets y JSP implementando patrones como MVC (modelo-vista-controlador), singleton, factory.
 
 Funcionalidades:
   - Agregar productos al carrito.
   - Modificar y eliminar productos.
   - Calcular total de la compra.
-  - Simulación de checkout.
+  - Generación de factura PDF.
+
+El trabajo fomentó la colaboración y la aplicación de conceptos clave, como la separación de responsabilidades, trabajo con repositorios y desarrollo web dinámico.
+
+
   
 Tecnologías usadas: Backend en Java, Frontend en HTML/CSS/JS, servidor Apache Tomcat.`,
     ["Java", "Tomcat", "Bootstrap", "Git"],
