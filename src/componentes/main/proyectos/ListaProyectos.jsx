@@ -24,8 +24,8 @@ const ProyectoCard = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
   const [img, setImg] = useState("");
   useEffect(() => {
     const getImgInicial = async () => {
-      const urlDark = `assets/img/dark/${nombre}.jpg`
-      const urlLight = `assets/img/${nombre}.jpg`
+      const urlDark = `assets/img/dark/${nombre}.webp`
+      const urlLight = `assets/img/${nombre}.webp`
             
       if (darkMode) {
         const existeImgDark = await existeImg(urlDark)
@@ -39,7 +39,7 @@ const ProyectoCard = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
     }
     getImgInicial()
 
-    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.jpg`);
+    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.webp`);
   }, [darkMode]);
 
   return (

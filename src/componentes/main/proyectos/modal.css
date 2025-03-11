@@ -52,14 +52,23 @@ body.modal-open {
 }
 .modal-img-container.zoomed>img{
   cursor: zoom-out;
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  min-height: max(90vh,500px);
+  min-width: max(90vw,500px);
 }
 .modal-img-container.zoomed>img.horizontal{
-  min-height: max(90vh,500px);
-  max-width: none;
+  max-width: 90vw;
 }
-.modal-img-container.zoomed>img.vertical{
-  min-width: max(90vw,500px);
-  max-height: none;
+
+
+@media screen and (max-width: 800px) {
+  .modal-img-container.zoomed>img.horizontal{
+    max-width: none;
+    max-height: 90vh;
+  }
 }
 
 .modal-close {

@@ -22,7 +22,7 @@ const Proyecto = () => {
   
   const { darkMode } = useContext(DarkContext)
   const [img, setImg] = useState("");
-  const [arrImg, setArrImg] = useState([`${img}.jpg`])
+  const [arrImg, setArrImg] = useState([`${img}.webp`])
   
   useEffect(() => {
     const getImgInicial = async () => {
@@ -30,7 +30,7 @@ const Proyecto = () => {
       const urlLight = `assets/img/${proyecto.nombre}`
             
       if (darkMode) {
-        const existeImgDark = await existeImg(urlDark+".jpg")
+        const existeImgDark = await existeImg(urlDark+".webp")
         if (existeImgDark) {
           setImg(urlDark)
           return
@@ -46,10 +46,10 @@ const Proyecto = () => {
   
   useEffect(() => {
     const getImgs  = async () => {
-      let arr = [`${img}.jpg`]
+      let arr = [`${img}.webp`]
 
       for (let i = 2; i < 10; i++) {
-        let url = `${img} (${i}).jpg`
+        let url = `${img} (${i}).webp`
         const existe = await existeImg(url)
           
         if (!existe) 

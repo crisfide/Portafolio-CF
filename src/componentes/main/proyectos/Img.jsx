@@ -49,7 +49,9 @@ const ModalPortalImg = ({ children, isOpen, close }) => {
       <button className="modal-close">
         <i className="fa-solid fa-x" id="burgerIcon"></i>
       </button>
-      <div className={`modal-img-container ${zoom && "zoomed"}`} onClick={()=>setZoom(!zoom)}>
+      <div className={`modal-img-container ${zoom && "zoomed"}`} 
+          onClick={()=>setZoom(!zoom)} 
+        >
         {children}
       </div>
     </article>,
