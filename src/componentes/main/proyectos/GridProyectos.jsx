@@ -1,9 +1,10 @@
 import { useState, useEffect, useContext } from "react"
 import { DarkContext } from "../../../context/DarkContext"
-import './iconos.css'
 import { Link } from "react-router-dom"
 import { obtenerIcono } from "../../../helpers/obtenerIcono"
 import { existeImg } from "../../../helpers/existeImg"
+import './gridProyectos.css'
+import '../../iconos.css'
 
 const GridProyectos = ({proyectos}) => {
   return (

@@ -1,3 +1,5 @@
+import './perfil.css'
+
 export const Perfil = ( {sobreMi:{titulo,descripcion}} ) => {
   return (
     <section className="perfil">

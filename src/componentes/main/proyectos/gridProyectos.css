@@ -1,0 +1,63 @@
+.carrusel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    overflow-x: auto;
+}
+.carrusel .proyecto{
+    min-width: 300px;
+    max-width: 300px;
+    max-height: 450px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0;
+    position: relative;
+}
+.carrusel .transparente{
+    height: 100%;
+    width: 100%;
+    background-color: #9a9898cc;
+    top: 0;
+    position: absolute;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.proyecto h3{
+    margin: 1rem auto;
+}
+.proyecto ul{
+    margin: 20px 0 0 0;
+}
+.proyecto ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+.proyecto ul:first-child{
+    margin-top: 50px;
+}
+.proyecto li a {
+    padding: 5px;
+}
+.proyecto li a:hover {
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 800px) {
+    .carrusel{
+        font-size: clamp(16px,3vh,25px);
+    }
+    .carrusel .proyecto{
+        min-width: 85%;
+        min-height: 50vh;
+        max-height: 75vh;
+    }
+}

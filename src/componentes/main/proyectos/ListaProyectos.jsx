@@ -3,6 +3,8 @@ import { DarkContext } from "../../../context/DarkContext"
 import { existeImg } from "../../../helpers/existeImg"
 import { obtenerIcono } from "../../../helpers/obtenerIcono"
 import { Link } from "react-router-dom"
+import './listaProyectos.css'
+import '../../iconos.css'
 
 const ListaProyectos = ({proyectos}) => {
   return (

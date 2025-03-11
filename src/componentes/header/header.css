@@ -1,0 +1,114 @@
+/* nav */
+.celular{
+    display: none;
+}
+.pc{
+    display: inline-block;
+    transition: opacity .3s ease;
+    will-change: opacity;
+}
+
+header{
+    background-color: #DDDDDDCC;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    width: 80vw;
+    padding: 20px 0;
+    height: 20px;
+    top: 0;
+    left: 10vw;
+    z-index: 1000;
+}
+nav{
+    display: flex;
+    flex-grow: 1; 
+    width: 100%;
+    align-items: center;
+}
+nav ul{
+    width: 90%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+nav li a {
+    padding: 5px;
+}
+nav li a:hover {
+    font-weight: bold;
+}
+
+nav button{
+    width: 30px;
+    height: 30px;
+    flex-grow: 0;
+    margin: auto; 
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #223;
+    border-color: #ccc;
+    border-style: solid;
+    transition: background-color 1s ease-in-out, border-color 1s ease-in-out;
+    will-change: background-color, border-color;
+}
+nav button img{    
+    width: 100%;
+    height: 100%;
+}
+
+
+/* @media (prefers-color-scheme: dark){ */
+
+    .dark nav button {    
+        background-color: #ccc;
+        border-color: #223;
+    }
+
+/* } */
+
+
+@media screen and (max-width: 800px) {
+    nav ul{
+        max-height: 25px;
+        transition: max-height .75s ease;
+        will-change: max-height;
+    }
+    nav ul.expand{
+        max-height: 100vh;
+    }
+    .pc{
+        visibility: hidden; 
+        opacity: 0;
+        transition: visibility .5s ease, opacity .5s ease;
+        will-change: visibility, opacity;
+    }
+    .celular{
+        display: inline-block;
+    }
+    .pc.visible{
+        display: inline-block;
+        opacity: 1;
+        visibility: visible;
+    }
+    header{
+        width: 100%;
+        left: 0;
+        font-size: clamp(16px,4vh,35px);  
+        height: auto;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav button{
+        margin-top: 0;
+    }
+
+
+}

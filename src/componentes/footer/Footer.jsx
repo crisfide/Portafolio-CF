@@ -1,5 +1,7 @@
 import { redesSociales } from "../../dataProps/redesSociales"
 import RedesSoc from "./RedesSoc"
+import './footer.css'
+import '../iconos.css'
 
 const compartirApp = (e) => {
   e.preventDefault()

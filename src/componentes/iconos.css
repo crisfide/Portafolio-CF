@@ -10,3 +10,25 @@
     height: 16px;
 }
   
+.fa-brands, .fa-solid{
+    color: #222;    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.fa-brands::before, .fa-solid::before{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.share-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.share-link svg {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

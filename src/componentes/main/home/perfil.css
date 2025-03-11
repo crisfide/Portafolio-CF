@@ -1,0 +1,22 @@
+.perfil{
+    display: flex;
+}
+.perfil figure{
+    text-align: center;
+}
+.perfil img{
+    max-width: 200px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .perfil{
+        flex-direction: column;
+        font-size: 4vw;
+    }
+        
+    .perfil figure{
+        margin-top: 50px;
+    }
+}

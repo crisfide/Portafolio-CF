@@ -6,7 +6,8 @@ html, body{
 body{
     font-family: sans-serif;
     padding-top: 60px;
-    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+    will-change: background-color, color;
 }
 /*#root{
     ;
@@ -25,70 +26,14 @@ ul{
     align-items: center;
     padding-left: 0;
 }
-.celular{
-    display: none;
-}
-.pc{
-    display: inline-block;
-    transition: opacity .5s ease;
+
+button, .btn, footer, ul, img{
+    user-select: none;
 }
 
-/* nav */
-header{
-    background-color: #DDDDDDCC;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    width: 80vw;
-    padding: 20px 0;
-    height: 20px;
-    top: 0;
-    left: 10vw;
-    z-index: 1000;
-}
-nav{
-    display: flex;
-    flex-grow: 1; 
-    width: 100%;
-    align-items: center;
-}
-nav ul{
-    width: 90%;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
-}
-nav li a {
-    padding: 5px;
-}
-nav li a:hover {
-    font-weight: bold;
-}
 
-nav button{
-    width: 30px;
-    height: 30px;
-    flex-grow: 0;
-    margin: auto; 
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: #223;
-    border-color: #ccc;
-    border-style: solid;
-    transition: background-color 1s ease-in-out, border-color 1s ease-in-out;
-}
-nav button img{    
-    width: 100%;
-    height: 100%;
-}
 
-/* perfil */
+/* main */
 main, footer ul{
     margin: 10px auto;
     width: 50vw;
@@ -97,15 +42,6 @@ main, footer ul{
 }
 section{
     padding-bottom: 30px;
-}
-.perfil{
-    display: flex;
-}
-.perfil figure{
-    text-align: center;
-}
-.perfil img{
-    max-width: 200px;
 }
 
 .btn{
@@ -121,184 +57,13 @@ section{
 
 }
 
-
-/* carrusel */
 .mt{
     margin-top: 5rem;
     text-align: center;
 }
-.carrusel{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 50px;
-    overflow-x: auto;
-}
-.carrusel .proyecto{
-    min-width: 300px;
-    max-width: 300px;
-    max-height: 450px;
-    border: 1px solid black;
-    text-align: center;
-    padding: 0;
-    position: relative;
-}
-.carrusel .transparente{
-    height: 100%;
-    width: 100%;
-    background-color: #9a9898cc;
-    top: 0;
-    position: absolute;
-    overflow: hidden;
-    display:flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    padding: 0px;
-    box-sizing: border-box;
-}
-.proyecto h3{
-    margin: 1rem auto;
-}
-.proyecto ul{
-    margin: 20px 0 0 0;
-}
-.proyecto ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0;
-}
-.proyecto ul:first-child{
-    margin-top: 50px;
-}
-.proyecto li a {
-    padding: 5px;
-}
-.proyecto li a:hover {
-    font-weight: bold;
-}
-.fa-brands, .fa-solid{
-    color: #222;    display: inline-block;
-    width: 16px;
-    height: 16px;
-}
-.fa-brands::before, .fa-solid::before{
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-}
-
-/* cards */ 
-.cards{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-.card{
-    border: 1px solid #8888;    
-    padding: 1rem ;
-    width: 90%;
-    height: 200px;
-}
-.card:hover{
-    box-shadow: 0 0 10px #a89fe9;
-}
-.cols{
-    display: flex;
-    gap: 20px
-}
-.card .col{
-    display:flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-}
-
-.card .img{
-    overflow: hidden;
-    box-sizing: border-box;
-    flex: 0 0 min(30%,200px); 
-}
-.card .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top; 
-}
-.card h3{
-    margin-top: 0;
-}
-.card p{
-    word-wrap: break-word;
-}
-.card ul{
-    justify-content: start;
-    gap: 10px;
-}
-
-/* proyectoDetalle */
-.proyecto-detalle section{
-    padding-bottom: 50px;
-}
-.proyecto-detalle p{
-    white-space: pre-wrap;
-}
-.proyecto-detalle ul{
-    flex-direction: column;
-    align-items: start;
-    padding-left: 0;
-    min-width: 50%;
-}
-.proyecto-detalle ul li{
-    border: 1px solid #8888;
-    width: 100%;
-}
-.proyecto-detalle ul li>*{
-    display: block;
-    padding: 1rem 0.5rem;
-    height: 100%;
-}
-.proyecto-detalle ul li>*:hover{
-    box-shadow: 0 0 10px #a89fe9;
-}
-.proyecto-detalle ul li>a:active{
-    box-shadow: 0 0 10px #a89fe977;
-    text-shadow: 2px 2px 5px gray;
-}
-
-.img-proy{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.img-proy img{
-    max-width: 350px;
-    max-height: 350px;
-    cursor: zoom-in;
-}
 
 
-/* footer */
-footer{
-    border-top: 1px solid gray;
-    padding: 50px 10px;
-}
-footer a:hover{
-    font-weight: bold;
-}
-.share-link {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 50px;
-}
-.share-link svg {
-    margin-right: 8px;
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
+
 
 /* barra de desplazamiento*/
 ::-webkit-scrollbar {
@@ -317,9 +82,7 @@ footer a:hover{
     background: #648ade;
 }
 
-button, .btn, footer, ul{
-    user-select: none;
-}
+
 
 
 /* @media (prefers-color-scheme: dark){ */
@@ -337,10 +100,6 @@ button, .btn, footer, ul{
         color: rgb(82, 220, 36);
         border-color: rgb(82, 220, 36);
     }
-    .dark nav button {    
-        background-color: #ccc;
-        border-color: #223;
-    }
     .dark .fa-brands,.dark .fa-solid{
         color: white;
     }
@@ -357,62 +116,10 @@ button, .btn, footer, ul{
 
 
 @media screen and (max-width: 800px) {
-    nav ul{
-        max-height: 25px;
-        transition: max-height 1.5s ease;
-    }
-    nav ul.expand{
-        max-height: 100vh;
-    }
-    .pc{
-        visibility: hidden; 
-        opacity: 0;
-        transition: visibility 1.5s ease, opacity 1.5s ease;
-    }
-    .celular{
-        display: inline-block;
-    }
-    .pc.visible{
-        display: inline-block;
-        opacity: 1;
-        visibility: visible;
-    }
-    header{
-        width: 100%;
-        left: 0;
-        font-size: clamp(16px,4vh,35px);  
-        height: auto;
-    }
-    nav ul{
-        flex-direction: column;
-    }
-    nav button{
-        margin-top: 0;
-    }
 
     main{
         padding: 10px 10vw;
     }
-    .perfil{
-        flex-direction: column;
-        font-size: 4vw;
-    }
-        
-    .perfil figure{
-        margin-top: 50px;
-    }
 
-    .carrusel{
-        font-size: clamp(16px,3vh,25px);
-    }
-    .carrusel .proyecto{
-        min-width: 85%;
-        min-height: 50vh;
-        max-height: 75vh;
-    }
 
-    .proyecto-detalle ul li{
-        font-size: clamp(16px,2vh,25px);  
-        
-    }
 }

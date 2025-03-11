@@ -7,6 +7,9 @@ import { DarkContext } from "../../../context/DarkContext"
 import Img from "./Img"
 import { existeImg } from "../../../helpers/existeImg"
 import GridProyectos from "./GridProyectos"
+import './proyecto.css'
+import '../../iconos.css'
+
 
 const Proyecto = () => {
   const {nombre} = useParams()
