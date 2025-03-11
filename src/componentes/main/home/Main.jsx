@@ -1,7 +1,7 @@
-import { proyectos } from "./dataProps/proyectos"
-import { sobreMi } from "./dataProps/sobreMi"
+import { proyectos } from "../../../dataProps/proyectos"
+import { sobreMi } from "../../../dataProps/sobreMi"
 import { Perfil } from "./Perfil"
-import GridProyectos from "./GridProyectos"
+import GridProyectos from "../proyectos/GridProyectos"
 
 const Main = () => {
   return (

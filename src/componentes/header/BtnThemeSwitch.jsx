@@ -1,7 +1,7 @@
-import dark from "../svg/dark.svg"
-import light from "../svg/light.svg"
+import dark from "../../svg/dark.svg"
+import light from "../../svg/light.svg"
 import { useContext } from "react"
-import { DarkContext } from "./DarkContext"
+import { DarkContext } from "../../context/DarkContext"
 
 
 const BtnThemeSwitch = () => {

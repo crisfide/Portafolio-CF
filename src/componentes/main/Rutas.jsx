@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom"
-import { Main } from "."
-import Contacto from "./Contacto"
-import { proyectos } from "./dataProps/proyectos"
-import ListaProyectos from "./ListaProyectos"
-import Proyecto from "./Proyecto"
+import { Main } from ".."
+import Contacto from "./contacto/Contacto"
+import { proyectos } from "../../dataProps/proyectos"
+import ListaProyectos from "./proyectos/ListaProyectos"
+import Proyecto from "./proyectos/Proyecto"
 import ScrollToTop from "./ScrollToTop"
 
 

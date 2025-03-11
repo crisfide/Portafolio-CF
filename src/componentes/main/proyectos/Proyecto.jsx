@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom"
-import { proyectos } from "./dataProps/proyectos"
+import { proyectos } from "../../../dataProps/proyectos"
 import ListaProyectos from "./ListaProyectos"
-import { obtenerIcono } from "../helpers/obtenerIcono"
+import { obtenerIcono } from "../../../helpers/obtenerIcono"
 import { useContext, useEffect, useState } from "react"
-import { DarkContext } from "./DarkContext"
+import { DarkContext } from "../../../context/DarkContext"
 import Img from "./Img"
-import { existeImg } from "../helpers/existeImg"
+import { existeImg } from "../../../helpers/existeImg"
 import GridProyectos from "./GridProyectos"
 
 const Proyecto = () => {

@@ -1,13 +1,14 @@
 import { HashRouter } from "react-router-dom"
-import {Header, Main, Footer} from "./componentes"
-import { DarkContext } from "./componentes/DarkContext"
-import {useDarkMode} from "./hooks/useDarkMode"
-import Rutas from "./componentes/Rutas"
+import {Header, Footer} from "."
+import { DarkContext } from "../context/DarkContext"
+import {useDarkMode} from "../hooks/useDarkMode"
+import Rutas from "./main/Rutas"
 
 
 
 const Container = () => {
   const { darkMode, cambiarTema } = useDarkMode()
+
   return (
     <>    
       <DarkContext.Provider value={{ darkMode, cambiarTema }}>

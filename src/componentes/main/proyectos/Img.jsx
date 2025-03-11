@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { useModal } from "../hooks/useModal";
+import { useModal } from "../../../hooks/useModal";
 import './modal.css'
 import { useEffect, useState } from "react";
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useBurgerMenu } from "../hooks/useBurgerMenu"
+import { useBurgerMenu } from "../../hooks/useBurgerMenu"
 
 
 const NavMenu = ({items}) => {

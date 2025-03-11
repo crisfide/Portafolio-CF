@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
-import { DarkContext } from "./DarkContext"
-import { existeImg } from "../helpers/existeImg"
-import { obtenerIcono } from "../helpers/obtenerIcono"
+import { DarkContext } from "../../../context/DarkContext"
+import { existeImg } from "../../../helpers/existeImg"
+import { obtenerIcono } from "../../../helpers/obtenerIcono"
 import { Link } from "react-router-dom"
 
 const ListaProyectos = ({proyectos}) => {

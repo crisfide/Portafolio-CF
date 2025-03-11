@@ -1,9 +1,9 @@
 import { useState, useEffect, useContext } from "react"
-import { DarkContext } from "./DarkContext"
+import { DarkContext } from "../../../context/DarkContext"
 import './iconos.css'
 import { Link } from "react-router-dom"
-import { obtenerIcono } from "../helpers/obtenerIcono"
-import { existeImg } from "../helpers/existeImg"
+import { obtenerIcono } from "../../../helpers/obtenerIcono"
+import { existeImg } from "../../../helpers/existeImg"
 
 const GridProyectos = ({proyectos}) => {
   return (

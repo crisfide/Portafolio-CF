@@ -1,4 +1,4 @@
-import { redesSociales } from "./dataProps/redesSociales"
+import { redesSociales } from "../../dataProps/redesSociales"
 import RedesSoc from "./RedesSoc"
 
 const compartirApp = (e) => {
