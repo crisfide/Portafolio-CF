@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { proyectos } from "./dataProps/proyectos"
 import ListaProyectos from "./ListaProyectos"
-import { obtenerIcono } from "./obtenerIcono"
+import { obtenerIcono } from "../helpers/obtenerIcono"
 import { useContext, useEffect, useState } from "react"
 import { DarkContext } from "./DarkContext"
 import Img from "./Img"
@@ -15,6 +15,7 @@ const Proyecto = () => {
   if (!proyecto) return (
     <main>
       <h2>No existe el proyecto {nombre}</h2>
+      <br />
       <ListaProyectos proyectos={proyectos} />
     </main>
   )
@@ -41,7 +42,7 @@ const Proyecto = () => {
     getImgInicial()
 
     //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
-  }, [darkMode]);
+  }, [darkMode, proyecto]);
   
   useEffect(() => {
     const getImgs  = async () => {
@@ -105,7 +106,7 @@ const Proyecto = () => {
               <li>
                 <a href={proyecto.linkWeb} target="_blank" rel="noopener noreferrer" title="Acceder al proyecto">
                   <i className="fa-solid fa-link"></i> 
-                  <span>  Acceder al proyecto</span>
+                  <span>  Visitar sitio</span>
                 </a>
               </li>
               :null

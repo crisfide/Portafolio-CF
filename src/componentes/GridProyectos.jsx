@@ -2,16 +2,14 @@ import { useState, useEffect, useContext } from "react"
 import { DarkContext } from "./DarkContext"
 import './iconos.css'
 import { Link } from "react-router-dom"
-import { obtenerIcono } from "./obtenerIcono"
+import { obtenerIcono } from "../helpers/obtenerIcono"
 import { existeImg } from "../helpers/existeImg"
 
 const GridProyectos = ({proyectos}) => {
   return (
     <>
       <h2 className="mt">Proyectos en los que he trabajado</h2>
-      <section className="carrusel" id="proyectos">
-        
-
+      <section className="carrusel" id="proyectos">      
         {
           proyectos.map( proyecto => (
             <ProyectoItem {...proyecto} key={proyecto.nombre} />)
