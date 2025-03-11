@@ -20,7 +20,7 @@ const Img = ({src,alt="",title=""}) => {
             setClassName("vertical");
         }
     };
-  }, []);
+  }, [src]);
 
   return isOpen ? 
     (<ModalPortalImg isOpen={isOpen} close={close}>
