@@ -1,8 +1,8 @@
-import { useState, useEffect, useContext } from "react"
+import { useContext } from "react"
 import { DarkContext } from "../../../context/DarkContext"
 import { Link } from "react-router-dom"
 import { obtenerIcono } from "../../../helpers/obtenerIcono"
-import { existeImg } from "../../../helpers/existeImg"
+import { useThemeImg } from "../../../hooks/useThemeImg"
 import './gridProyectos.css'
 import '../../iconos.css'
 
@@ -23,26 +23,7 @@ const GridProyectos = ({proyectos}) => {
 
 const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen}) => {
   const { darkMode } = useContext(DarkContext)
-  const [img, setImg] = useState("");
-  useEffect(() => {
-    const getImgInicial = async () => {
-      const urlDark = `assets/img/dark/${nombre}.webp`
-      const urlLight = `assets/img/${nombre}.webp`
-            
-      if (darkMode) {
-        const existeImgDark = await existeImg(urlDark)
-        if (existeImgDark) {
-          setImg(urlDark)
-          return
-        }
-      }
-
-      setImg(urlLight)
-    }
-    getImgInicial()
-
-    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.webp`);
-  }, [darkMode]);
+  const img = useThemeImg(nombre,darkMode)
 
   const estiloFondo = {
         backgroundImage: `url(${img})`,

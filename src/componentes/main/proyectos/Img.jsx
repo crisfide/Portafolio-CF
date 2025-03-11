@@ -24,8 +24,8 @@ const Img = ({src,alt="",title=""}) => {
 
   return isOpen ? 
     (<ModalPortalImg isOpen={isOpen} close={close}>
-        <img src={src} alt={alt} title={title} className={className} />
-    </ModalPortalImg>) : <img src={src} alt={alt} title={title} onClick={open} />
+        <img src={src} alt={alt} title={title} className={className} loading="lazy" />
+    </ModalPortalImg>) : <img src={src} alt={alt} title={title} onClick={open} loading="lazy" />
   
 }
 

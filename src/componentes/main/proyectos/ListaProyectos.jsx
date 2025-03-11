@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { DarkContext } from "../../../context/DarkContext"
-import { existeImg } from "../../../helpers/existeImg"
 import { obtenerIcono } from "../../../helpers/obtenerIcono"
 import { Link } from "react-router-dom"
+import { useThemeImg } from "../../../hooks/useThemeImg"
 import './listaProyectos.css'
 import '../../iconos.css'
 
@@ -23,33 +23,14 @@ const ListaProyectos = ({proyectos}) => {
 
 const ProyectoCard = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen}) => {
   const { darkMode } = useContext(DarkContext)
-  const [img, setImg] = useState("");
-  useEffect(() => {
-    const getImgInicial = async () => {
-      const urlDark = `assets/img/dark/${nombre}.webp`
-      const urlLight = `assets/img/${nombre}.webp`
-            
-      if (darkMode) {
-        const existeImgDark = await existeImg(urlDark)
-        if (existeImgDark) {
-          setImg(urlDark)
-          return
-        }
-      }
-
-      setImg(urlLight)
-    }
-    getImgInicial()
-
-    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.webp`);
-  }, [darkMode]);
+  const img = useThemeImg(nombre,darkMode)
 
   return (
     <Link to={`/proyectos/${nombre}`}>
 
       <article className="card cols">
         <div className="col img">
-          <img src={img} alt={`Imagen de ${nombre}`} />
+          <img src={img} alt={`Imagen de ${nombre}`} loading="lazy" />
         </div>
         <div className="col">
           <div>

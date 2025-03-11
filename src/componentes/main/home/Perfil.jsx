@@ -12,7 +12,7 @@ export const Perfil = ( {sobreMi:{titulo,descripcion}} ) => {
       </div>
       <div>
         <figure>
-          <img src="assets/fotoPerfil.jpg" alt="Foto de Christian Fidelio" />
+          <img src="assets/fotoPerfil.jpg" alt="Foto de Christian Fidelio" loading="lazy" />
         </figure>
       </div>
 
