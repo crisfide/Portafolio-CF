@@ -1,9 +1,13 @@
+:root {
+    --color-linkedin: #0A66C2;
+  }
+
 main.contacto{
     display: flex;
 }
 .btn.linkedin, .btn.linkedin>*{
-    background-color: #0e76a8;
+    background-color: var(--color-linkedin);
     color: white;
-    border-color: #0e76a8;
+    border-color: var(--color-linkedin);
     margin: auto;
 }
