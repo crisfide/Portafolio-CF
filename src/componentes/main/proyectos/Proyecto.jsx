@@ -24,33 +24,24 @@ const Proyecto = () => {
   )
   
   const { darkMode } = useContext(DarkContext)
-  const [img, setImg] = useState("");
-  const [arrImg, setArrImg] = useState([`${img}.webp`])
+  const [arrImg, setArrImg] = useState([])
   
   useEffect(() => {
-    const getImgInicial = async () => {
+    let isMounted =true
+
+    const getImgs = async () => {
       const urlDark = `assets/img/dark/${proyecto.nombre}`
       const urlLight = `assets/img/${proyecto.nombre}`
             
+      let img = urlLight
       if (darkMode) {
         const existeImgDark = await existeImg(urlDark+".webp")
         if (existeImgDark) {
-          setImg(urlDark)
-          return
+          img = urlDark
         }
       }
 
-      setImg(urlLight)
-    }
-    getImgInicial()
-
-    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
-  }, [darkMode, proyecto]);
-  
-  useEffect(() => {
-    const getImgs  = async () => {
       let arr = [`${img}.webp`]
-
       for (let i = 2; i < 10; i++) {
         let url = `${img} (${i}).webp`
         const existe = await existeImg(url)
@@ -60,11 +51,19 @@ const Proyecto = () => {
         
         arr.push(url)
       }
+
       setArrImg(arr)
     }
+    
+    if (isMounted) getImgs()
+      
+    return () => {
+      isMounted = false;
+    };
+      
+    //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${proyecto.nombre}`);
+  }, [darkMode, proyecto.nombre]);
 
-    getImgs()
-  }, [img]);
 
   return (
     <main>

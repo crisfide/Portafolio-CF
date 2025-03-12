@@ -5,6 +5,8 @@ export const useThemeImg = (nombre, darkMode) => {
   const [img, setImg] = useState(null);
 
   useEffect(() => {
+    let isMounted = true
+
     const getImgInicial = async () => {
       const urlDark = `assets/img/dark/${nombre}_preview.webp`
       const urlLight = `assets/img/${nombre}_preview.webp`
@@ -19,10 +21,15 @@ export const useThemeImg = (nombre, darkMode) => {
 
       setImg(urlLight)
     }
-    getImgInicial()
+
+    if(isMounted) getImgInicial()
+
+    return () => {
+      isMounted = false;
+    };
 
     //setImg(`assets/img/${darkMode === true ? "dark/" : ""}${nombre}.webp`);
-  }, [darkMode]);
+  }, [darkMode,nombre]);
 
   return img;
 };
