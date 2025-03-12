@@ -4,7 +4,7 @@ import './contacto.css'
 const Contacto = () => {
   const linkLinkedin = redesSociales.find(r=>r.txt==="Linkedin").ruta
   return (
-    <main>
+    <main className="contacto">
       {/* <form action="" style={{textAlign:"center", padding:"30%"}}>
       </form> */}
         <a href={linkLinkedin} className={`btn linkedin`} target="_blank" rel="noopener noreferrer">
