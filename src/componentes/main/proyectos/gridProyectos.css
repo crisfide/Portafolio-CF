@@ -36,18 +36,26 @@
 .proyecto ul{
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items:start;
     justify-content: space-around;
     padding: 0;
+    gap: 5px;
 }
 .proyecto ul:first-child{
     margin-top: 50px;
+}
+.proyecto ul li{
+    max-width: 20%;
 }
 .proyecto li a {
     padding: 5px;
 }
 .proyecto li a:hover {
     font-weight: bold;
+}
+.proyecto .tec small{
+    font-size: .75rem;
+    word-wrap: break-word; /* Soporte para navegadores antiguos */
 }
 
 

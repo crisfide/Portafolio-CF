@@ -13,7 +13,7 @@ import '../../iconos.css'
 
 const Proyecto = () => {
   const {nombre} = useParams()
-  const proyecto = proyectos.find(p=>p.nombre===nombre)
+  const proyecto = proyectos.find(p => p.nombre===nombre)
   //console.log(proyecto)
   if (!proyecto) return (
     <main>
@@ -134,7 +134,7 @@ const Proyecto = () => {
       </article>
 
       
-      <GridProyectos proyectos={proyectos} />
+      <GridProyectos proyectos={proyectos.filter(p => p.nombre!=proyecto.nombre)} />
 
     </main>
   )
