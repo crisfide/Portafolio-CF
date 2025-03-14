@@ -35,6 +35,27 @@ Funcionalidades:
   ),
 
   crearProyecto(
+    "Sistema_de_Finanzas_Hogareñas_UNLZ",
+    "CAJA es una aplicación diseñada para gestionar los gastos e ingresos del hogar, implementando el patrón MVC en PHP.",
+    `CAJA es un sistema colaborativo desarrollado en equipo para gestionar los gastos e ingresos del hogar, facilitando el control financiero personal. El proyecto fue implementado en un repositorio Git compartido con otros grupos, permitiendo una integración eficiente del código y una colaboración fluida entre equipos.
+
+  Funcionalidades:
+  - Registro y Login: Acceso seguro con email y contraseña. Registro con datos como nombre, DNI, email, celular y contraseña.
+  - Envío de mail para recuperar la contraseña a través de la librería PHPMailer.
+  - Panel de Administración:
+  - Alta de cuentas.
+  - Registro de ingresos y egresos.
+  - Consulta de movimientos (completos, filtrados por fecha, tipo de movimiento y categoría).
+  - Tabla y gráfico que muestran el porcentaje que representan cada tipo de gasto en los ingresos (se utiliza Chart.js).
+  
+Este sistema facilita la toma de decisiones financieras a través de un seguimiento detallado y visual de los movimientos económicos.`,
+    ["PHP", "MySQL", "JavaScript", "Bootstrap", "Git"],
+    null,
+    "https://github.com/juanPabloCesarini/appweb_caba_2c_2024",
+    ""
+  ),
+
+  crearProyecto(
     "Heladería_UNLZ",
     "Sistema web para la gestión de una heladería, implementando MVC e inyección de dependencias.",
     `Este proyecto, desarrollado en C# con ASP.NET, consiste en un sistema web para la gestión de una heladería, incluyendo un CRUD de sabores de helado, una página para realizar pedidos, distinguiendo rol de usuario administrador y cliente. 
