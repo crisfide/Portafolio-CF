@@ -99,6 +99,12 @@
     .carrusel .transparente{
         opacity: 1;
     }
+    .carrusel-container{
+        display: block;
+    }
+    .carrusel-container > .btn-scroll{
+        display: none;
+    }
     .carrusel .proyecto{
         min-width: 85%;
         min-height: 50vh;
