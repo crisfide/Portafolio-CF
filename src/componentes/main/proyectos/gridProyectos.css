@@ -1,9 +1,33 @@
+.carrusel-container{    
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.carrusel-container > .btn-scroll{
+    background-color: transparent;
+    border: 1px solid #8882;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 75px;
+}
+.carrusel-container > .btn-scroll:first-child:hover{
+    background: linear-gradient(to right, #8884,5%,transparent);
+    border-right: none;
+}
+.carrusel-container > .btn-scroll:last-child:hover{
+    background: linear-gradient(to left, #8884,5%,transparent);
+    border-left: none;
+}
+
 .carrusel{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 50px;
     overflow-x: auto;
+    scroll-behavior: smooth;
 }
 .carrusel .proyecto{
     min-width: 300px;
@@ -26,6 +50,11 @@
     justify-content:space-evenly;
     padding: 0px;
     box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.carrusel .transparente:hover{
+    opacity: 1;
 }
 .proyecto h3{
     margin: 1rem auto;
@@ -55,13 +84,20 @@
 }
 .proyecto .tec small{
     font-size: .75rem;
-    word-wrap: break-word; /* Soporte para navegadores antiguos */
+    word-wrap: break-word; 
+}
+
+.dark .carrusel-container > .btn-scroll{
+    color: white;
 }
 
 
 @media screen and (max-width: 800px) {
     .carrusel{
         font-size: clamp(16px,3vh,25px);
+    }
+    .carrusel .transparente{
+        opacity: 1;
     }
     .carrusel .proyecto{
         min-width: 85%;

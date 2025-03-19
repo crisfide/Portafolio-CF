@@ -6,17 +6,30 @@ import { useThemeImg } from "../../../hooks/useThemeImg"
 import './gridProyectos.css'
 import '../../iconos.css'
 
+const gridScroll = (e, izq=false) => {
+  const px = izq ? -350 : 350
+  proyectos.scroll(proyectos.scrollLeft + px, 0)
+}
+
+
 const GridProyectos = ({proyectos}) => {
   return (
     <>
       <h2 className="mt">Proyectos en los que he trabajado</h2>
-      <section className="carrusel" id="proyectos">      
-        {
-          proyectos.map( proyecto => (
-            <ProyectoItem {...proyecto} key={proyecto.nombre} />)
-          )
-        }
-      </section>
+
+      <div className="carrusel-container">
+        <button className="btn-scroll" onMouseDown={e => gridScroll(e, true)}>{"<"}</button>
+
+        <section className="carrusel" id="proyectos">
+          {
+            proyectos.map( proyecto => (
+              <ProyectoItem {...proyecto} key={proyecto.nombre} />)
+            )
+          }
+        </section>
+
+        <button className="btn-scroll" onMouseDown={e => gridScroll(e)}>{">"}</button>
+      </div>
     </>
   )
 }
