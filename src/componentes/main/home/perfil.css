@@ -1,5 +1,7 @@
 .perfil{
     display: flex;
+    margin: auto;
+    max-width: 60vw;
 }
 .perfil figure{
     text-align: center;

@@ -39,7 +39,7 @@ main{
 }
 main, footer ul{
     margin: 10px auto;
-    width: 50vw;
+    width: 65vw;
     min-width: 400px;
     max-width: 75vw;
 }

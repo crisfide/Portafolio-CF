@@ -24,7 +24,7 @@
 .carrusel{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 50px;
     overflow-x: auto;
     scroll-behavior: smooth;

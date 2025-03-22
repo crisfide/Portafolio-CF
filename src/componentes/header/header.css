@@ -75,19 +75,23 @@ nav button img{
 
 
 @media screen and (max-width: 800px) {
+    
     nav ul{
-        max-height: 25px;
-        transition: max-height .75s ease;
-        will-change: max-height;
+        max-height: 205px;
+        gap: 0;
+        transition: max-height .75s ease, gap .5s ease;
+        will-change: max-height, gap;
     }
     nav ul.expand{
         max-height: 100vh;
+        gap: 20px;
     }
     .pc{
         visibility: hidden; 
         opacity: 0;
-        transition: visibility .5s ease, opacity .5s ease;
-        will-change: visibility, opacity;
+        max-height: 0;
+        transition: visibility .5s ease, opacity .5s ease, max-height .75s ease;
+        will-change: visibility, opacity, max-height;
     }
     .celular{
         display: inline-block;
@@ -96,6 +100,7 @@ nav button img{
         display: inline-block;
         opacity: 1;
         visibility: visible;
+        max-height: 10vh;
     }
     header{
         width: 100%;
