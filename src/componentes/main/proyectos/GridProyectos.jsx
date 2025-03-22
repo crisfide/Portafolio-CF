@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { DarkContext } from "../../../context/DarkContext"
 import { Link } from "react-router-dom"
 import { obtenerIcono } from "../../../helpers/obtenerIcono"
@@ -13,14 +13,28 @@ const gridScroll = (e, izq=false) => {
 
 
 const GridProyectos = ({proyectos}) => {
+  const [btnIzqDisabled, setBtnIzqDisabled] = useState(true);
+  const [btnDerDisabled, setBtnDerDisabled] = useState(false);
+  
+  const handleScroll = e => {
+    const {scrollLeft, clientWidth, scrollWidth } = e.target
+    
+    setBtnIzqDisabled(scrollLeft === 0)
+    setBtnDerDisabled(scrollLeft + clientWidth >= scrollWidth)
+  }
+  
+
   return (
     <>
       <h2 className="mt">Proyectos en los que he trabajado</h2>
 
       <div className="carrusel-container">
-        <button className="btn-scroll" onMouseDown={e => gridScroll(e, true)}>{"<"}</button>
+        <button className="btn-scroll" 
+              onMouseDown={e => gridScroll(e, true)} 
+              disabled={btnIzqDisabled ? "disabled" : null}
+              >{"<"}</button>
 
-        <section className="carrusel" id="proyectos">
+        <section className="carrusel" id="proyectos" onScroll={handleScroll}>
           {
             proyectos.map( proyecto => (
               <ProyectoItem {...proyecto} key={proyecto.nombre} />)
@@ -28,7 +42,10 @@ const GridProyectos = ({proyectos}) => {
           }
         </section>
 
-        <button className="btn-scroll" onMouseDown={e => gridScroll(e)}>{">"}</button>
+        <button className="btn-scroll" 
+              onMouseDown={e => gridScroll(e)} 
+              disabled={btnDerDisabled ? "disabled" : null}
+              >{">"}</button>
       </div>
     </>
   )

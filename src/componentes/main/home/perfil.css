@@ -16,6 +16,7 @@
     .perfil{
         flex-direction: column;
         font-size: 4vw;
+        max-width: none;
     }
         
     .perfil figure{

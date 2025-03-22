@@ -12,14 +12,19 @@
     font-weight: bold;
     width: 75px;
 }
-.carrusel-container > .btn-scroll:first-child:hover{
-    background: linear-gradient(to right, #8884,5%,transparent);
+.carrusel-container > .btn-scroll:first-child:hover:not(:disabled){
+    background: linear-gradient(to right, #8884 5%,transparent);
     border-right: none;
 }
-.carrusel-container > .btn-scroll:last-child:hover{
-    background: linear-gradient(to left, #8884,5%,transparent);
+.carrusel-container > .btn-scroll:last-child:hover:not(:disabled){
+    background: linear-gradient(to left, #8884 5%,transparent);
     border-left: none;
 }
+.carrusel-container > .btn-scroll:disabled{
+    cursor: default;
+    color: #8882 !important; 
+}
+
 
 .carrusel{
     display: flex;
