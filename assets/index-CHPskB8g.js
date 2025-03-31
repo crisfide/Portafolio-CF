@@ -86,7 +86,7 @@ Funcionalidades:
   - Pedidos en línea.
   - Autenticación con Google.
   - Base de datos en Azure.
-  - Interfaz con Bootstrap y JavaScript.`,["C#",".NET","OAuth2","Azure","Bootstrap","Git"],null,"https://github.com/crisfide/HeladeriaTP-UNLZ","https://www.heladeriaunlz.somee.com/"),ui("Carrito_de_compras_UNLZ","Carrito de compras web desarrollado en Java con MVC para la UNLZ.",`Proyecto grupal desarrollado en Java con servlets y JSP implementando patrones como MVC (modelo-vista-controlador), singleton, factory.
+  - Interfaz con Bootstrap y JavaScript.`,["C#",".NET","OAuth2","Azure","Bootstrap","Git"],"https://www.heladeriaunlz.somee.com/","https://github.com/crisfide/HeladeriaTP-UNLZ",""),ui("Carrito_de_compras_UNLZ","Carrito de compras web desarrollado en Java con MVC para la UNLZ.",`Proyecto grupal desarrollado en Java con servlets y JSP implementando patrones como MVC (modelo-vista-controlador), singleton, factory.
 
 Funcionalidades:
   - Agregar productos al carrito.
