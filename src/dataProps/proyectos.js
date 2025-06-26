@@ -28,7 +28,7 @@ Proyecto web en Laravel + React (Inertia.js) | Hostinger – En línea desde may
 Desarrollo de una aplicación web responsiva para automatizar la gestión de trabajos eléctricos, pagos y sistema de referidos.
 
 Tecnologías principales:
-  - Backend: Laravel 12 (PHP 8.2), Eloquent ORM, rutas protegidas con middleware.
+  - Backend: Laravel 12 (PHP 8.2), Eloquent ORM, autenticación con Laravel Breeze, rutas protegidas con middleware.
   - Frontend: React + Inertia.js + Vite, diseño responsivo, Tailwind CSS, formularios dinámicos.
   - Base de datos: MySQL con relaciones entre entidades y optimización para escalabilidad futura.
   - Autenticación: Login con email, contraseña o Facebook Login (OAuth2).
