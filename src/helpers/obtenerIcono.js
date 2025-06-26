@@ -13,6 +13,8 @@ export const obtenerIcono = tec => {
       return "oauth";
     case "tomcat":
       return "tomcat-line";
+    case "tailwind css":
+      return "tailwindcss";
     default:
       return tecLower;
   }

@@ -17,6 +17,85 @@ const crearProyecto = (
 });
 
 export const proyectos = [
+
+  crearProyecto(
+    "Electro_Desafio",
+    "Desarrollo de una aplicación web responsiva para automatizar la gestión de trabajos eléctricos, pagos y sistema de referidos.",
+    `Sistema de Referidos para Electricistas
+
+Proyecto web en Laravel + React (Inertia.js) | Hostinger – En línea desde mayo de 2025
+
+Desarrollo de una aplicación web responsiva para automatizar la gestión de trabajos eléctricos, pagos y sistema de referidos.
+
+Tecnologías principales:
+  - Backend: Laravel 12 (PHP 8.2), Eloquent ORM, rutas protegidas con middleware.
+  - Frontend: React + Inertia.js + Vite, diseño responsivo, Tailwind CSS, formularios dinámicos.
+  - Base de datos: MySQL con relaciones entre entidades y optimización para escalabilidad futura.
+  - Autenticación: Login con email, contraseña o Facebook Login (OAuth2).
+  - Despliegue: Hosting en Hostinger, dominio propio, variables .env configuradas para producción.
+
+Funcionalidades principales:
+  - ABM (Alta/Baja/Modificación) de usuarios, clientes y demás entidades.
+  - Gestión de usuarios con roles diferenciados (admin / colaborador), perfil editable.
+
+  - Single Page Application moderna y optimizada.
+  - Diseño adaptable (mobile/PC) y modo claro/oscuro.
+  - Uso de React-Select y modales para facilitar la interacción.
+  - Reutilización de componentes; validación del lado cliente y servidor.
+  - Integración de gráficos con Chart.js para visualización de datos.
+
+
+Tareas adicionales realizadas:
+  - Pruebas funcionales realizadas en cada etapa para asegurar la integridad del sistema.
+  - Documentación técnica y funcional del sistema.
+  - Despliegue en servidor web con configuración de entorno de producción.
+
+`,
+    ["PHP", "Laravel", "React", "MySQL", "Tailwind CSS", "OAuth2", "Git"],
+    "https://electrodesafio.com/",
+    "https://github.com/crisfide/electroDesafioWeb",
+    ""
+  ),
+
+
+  crearProyecto(
+    "Sistema_de_Gestión_Contable",
+    "Pasantía como Desarrollador Full Stack .NET para Estudio contable, desarrollando un sistema de gestión y liquidación automática de impuestos.",
+    `Pasantía como Desarrollador Full Stack .NET para Estudio contable V. Domínguez 
+
+Este proyecto es el proyecto final de la carrera de Tecnicatura en Programación, y fue desarrollado como pasantía o práctica profesional supervisada.
+
+Diseño y desarrollo de un sistema interno de gestión contable, orientado a digitalizar y automatizar procesos operativos del estudio.
+
+Stack y Tecnologías Utilizadas:
+  - Backend: ASP.NET (C#), arquitectura MVC.
+  - Frontend: HTML, CSS (Bootstrap y AdminLTE), JavaScript puro (validaciones y control dinámico).
+  - Base de datos: SQL Server, diseño de modelo entidad-relación, consultas optimizadas, integración mediante Entity Framework Code First.
+  - Control de versiones: Git, trabajo colaborativo mediante repositorio en GitHub.
+  - Documentación: Redacción de manual técnico y documentación funcional para soporte y mantenimiento.
+
+Tareas destacadas:
+  - Desarrollo de módulos para gestión de empleados y automatización de reportes por cliente.
+  - Optimización de estructuras de datos leídos desde hojas de cálculo de Excel.
+  - Participación en validaciones funcionales junto a usuarios reales del estudio.
+  - Desarrollo incremental con fases: relevamiento → prototipado → desarrollo → validación → entrega.
+  - Despligue en servidor web a través de Docker.
+
+Alcance funcional:
+  - Sustitución de procesos manuales por flujos digitales.
+  - Cálculo de netos e impuestos a pagar según las diferentes alícuotas.
+  - Generación de reportes en PDF y Excel para Impuesto a las Ganancias, IVA e Ingresos brutos.
+  - Importación de datos desde planilla Excel estándar de AFIP.
+  - Automatización de resúmenes mensuales/anuales.
+  - Diseño de planillas personalizadas optimizadas para los procesos contables del cliente.
+
+`,
+    ["C#", ".NET", "Docker", "Bootstrap", "Git"],
+    null,
+    "https://github.com/CejasPablo/AppEstudioContable",
+    ""
+  ),
+
   crearProyecto(
     "ArgyView",
     "ArgyView es una app móvil Android que muestra en tiempo real las cotizaciones del mercado bursátil argentino...",
@@ -71,7 +150,7 @@ Funcionalidades:
   - Base de datos en Azure.
   - Interfaz con Bootstrap y JavaScript.`,
     ["C#", ".NET", "OAuth2", "Azure", "Bootstrap", "Git"],
-    null,
+    "https://www.heladeriaunlz.somee.com/",
     "https://github.com/crisfide/HeladeriaTP-UNLZ",
     ""
   ),
@@ -97,4 +176,5 @@ Tecnologías usadas: Backend en Java, Frontend en HTML/CSS/JS, servidor Apache T
     "https://github.com/crisfide/CarritoTP-UNLZ",
     ""
   ),
+
 ];
