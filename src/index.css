@@ -37,6 +37,22 @@ button, .btn, footer, ul, img{
 main{
     min-height: 60vh;
 }
+
+main {
+    animation: mov 0.5s ease;
+}
+
+@keyframes mov {
+    from {
+        opacity: 0;
+        transform: translateX(50vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 main, footer ul{
     margin: 10px auto;
     width: 65vw;
