@@ -92,6 +92,29 @@
     word-wrap: break-word; 
 }
 
+.proyecto::before {
+    content: "Ver detalles";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background: linear-gradient(to top, #000d, transparent);
+    color: #696393;
+    /* color: red; */
+    text-align: center;
+    font-size: 0.9rem;
+    pointer-events: none;
+    height: 50%;
+}
+.proyecto:hover::before{
+    content: "";
+}
+
+
 .dark .carrusel-container > .btn-scroll{
     color: white;
 }
