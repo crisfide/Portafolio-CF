@@ -21,7 +21,7 @@ const ListaProyectos = ({proyectos}) => {
   )
 }
 
-const ProyectoCard = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen}) => {
+const ProyectoCard = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYoutube}) => {
   const { darkMode } = useContext(DarkContext)
   const img = useThemeImg(nombre,darkMode)
 
@@ -62,6 +62,15 @@ const ProyectoCard = ({nombre, resumen, tecnologias, linkWeb, linkGithub, imagen
                 <li>
                   <a href={linkWeb} target="_blank" title="Acceder al proyecto">
                     <i className="fa-solid fa-link"></i> Visitar sitio
+                  </a>
+                </li>
+                :null
+              }
+              {
+                (linkYoutube) ?
+                <li>
+                  <a href={linkYoutube} target="_blank" title="Video del proyecto">
+                    <i className="fa-brands fa-youtube"></i> Video del proyecto
                   </a>
                 </li>
                 :null

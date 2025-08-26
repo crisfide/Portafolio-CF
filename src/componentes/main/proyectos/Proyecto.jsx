@@ -113,6 +113,16 @@ const Proyecto = () => {
               </li>
               :null
             }
+            {
+              (proyecto.linkYoutube) ?
+              <li>
+                <a href={proyecto.linkYoutube} target="_blank" rel="noopener noreferrer" title="Video del proyecto">
+                  <i className="fa-brands fa-youtube"></i> 
+                  <span>  Video del proyecto</span>
+                </a>
+              </li>
+              :null
+            }
 
           </ul>
 

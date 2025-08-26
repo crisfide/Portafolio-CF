@@ -1,5 +1,12 @@
 export const sobreMi = {
   titulo: "Hola, soy Christian, desarrollador Full Stack",
   descripcion:
-    "Busco una posición donde pueda aplicar mis habilidades técnicas, seguir desarrollando mis conocimientos en programación y contribuir al éxito de los distintos proyectos de los que sea parte mediante soluciones tecnológicas eficientes. Mi compromiso y pasión por la programación me motivan a asumir nuevos desafíos y aportar valor en equipo.",
+`Soy un apasionado por construir soluciones tecnológicas que generen impacto real en los negocios. Me especializo en integración de sistemas críticos, aplicaciones web escalables y en transformar procesos complejos en herramientas simples y efectivas.
+    
+Tecnologías clave: .NET, C#, React, Laravel, SQL Server, APIs REST, Git
+
+Busco desafíos donde aplicar mi mix único de habilidades técnicas + visión de negocio.
+
+
+`,
 };

@@ -5,7 +5,7 @@ const crearProyecto = (
   tecnologias,
   linkWeb,
   linkGithub,
-  imagen
+  linkYoutube,
 ) => ({
   nombre,
   resumen,
@@ -13,7 +13,7 @@ const crearProyecto = (
   tecnologias,
   linkWeb,
   linkGithub,
-  imagen,
+  linkYoutube,
 });
 
 export const proyectos = [
@@ -54,7 +54,7 @@ Tareas adicionales realizadas:
     ["PHP", "Laravel", "React", "MySQL", "Tailwind CSS", "OAuth2", "Git"],
     "https://electrodesafio.com/",
     "https://github.com/crisfide/electroDesafioWeb",
-    ""
+    null
   ),
 
 
@@ -93,7 +93,7 @@ Alcance funcional:
     ["C#", ".NET", "Docker", "Bootstrap", "Git"],
     null,
     "https://github.com/CejasPablo/AppEstudioContable",
-    ""
+    null
   ),
 
   crearProyecto(
@@ -110,7 +110,7 @@ Funcionalidades:
     ["Kotlin", "Android"],
     null,
     "https://github.com/crisfide/ArgyView",
-    ""
+    null
   ),
 
   crearProyecto(
@@ -131,7 +131,7 @@ Este sistema facilita la toma de decisiones financieras a través de un seguimie
     ["PHP", "MySQL", "JavaScript", "Bootstrap", "Git"],
     null,
     "https://github.com/juanPabloCesarini/appweb_caba_2c_2024",
-    ""
+    null
   ),
 
   crearProyecto(
@@ -152,7 +152,7 @@ Funcionalidades:
     ["C#", ".NET", "OAuth2", "Azure", "Bootstrap", "Git"],
     "https://www.heladeriaunlz.somee.com/",
     "https://github.com/crisfide/HeladeriaTP-UNLZ",
-    ""
+    null
   ),
 
   crearProyecto(
@@ -174,7 +174,7 @@ Tecnologías usadas: Backend en Java, Frontend en HTML/CSS/JS, servidor Apache T
     ["Java", "Tomcat", "Bootstrap", "Git"],
     null,
     "https://github.com/crisfide/CarritoTP-UNLZ",
-    ""
+    null
   ),
 
 ];

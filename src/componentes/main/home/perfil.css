@@ -9,6 +9,9 @@
 .perfil img{
     max-width: 200px;
 }
+.perfil p{
+    white-space: pre-wrap;
+}
 
 
 
