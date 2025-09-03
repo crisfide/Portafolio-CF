@@ -9,7 +9,7 @@ const BtnThemeSwitch = () => {
   const { darkMode, cambiarTema } = useContext(DarkContext)
 
   return (
-      <button onClick={cambiarTema}>
+      <button onClick={cambiarTema} className="btn-theme-switch" aria-label="Cambiar tema">
         <img src={darkMode ? light : dark} alt="Tema" 
           title={`Cambiar a modo ${darkMode?"claro":"oscuro"}`} />
 

@@ -52,11 +52,20 @@ nav button{
     margin: auto; 
     cursor: pointer;
     border-radius: 50%;
-    background-color: #223;
-    border-color: #ccc;
-    border-style: solid;
-    transition: background-color 1s ease-in-out, border-color 1s ease-in-out;
+    background-color: transparent;
     will-change: background-color, border-color;
+}
+nav .btn-nav-linkedin{
+    border: none;
+}
+nav .btn-nav-linkedin i::before{
+    font-size: 1.5em;
+}
+nav .btn-theme-switch{
+    border-style: solid;
+    border-color: #ccc;
+    background-color: #223;
+    transition: background-color 1s ease-in-out, border-color 1s ease-in-out;
 }
 nav button img{    
     width: 100%;
@@ -66,9 +75,11 @@ nav button img{
 
 /* @media (prefers-color-scheme: dark){ */
 
-    .dark nav button {    
-        background-color: #ccc;
+    /* .dark nav button {
+    } */
+    .dark nav .btn-theme-switch {    
         border-color: #223;
+        background-color: #ccc;
     }
 
 /* } */
