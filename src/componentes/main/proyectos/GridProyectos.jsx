@@ -60,6 +60,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        backgroundColor: darkMode ? "#a89fe955" : "#fff",
         // height: "100vh",
     };
 
