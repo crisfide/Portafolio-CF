@@ -8,14 +8,13 @@ const Habilidades = ({tecnologias}) => {
 
     return (
         <section className="habs">
-            <h2>Tecnologías y habilidades:</h2>
+            <h2>Tecnologías y habilidades</h2>
             <ul className="tecnologias-lista">
                 {tecnologias.map((tec) => (
                     <li key={tec} className="tecnologia-item">
                         <span className="tec" title={tec}>
                             <i className={`devicon-${obtenerIcono(tec)}-plain colored`}></i>
-                            <br />
-                            <code>{tec}</code>
+                            <small>{tec}</small>
                         </span>
                     </li>
                 ))}

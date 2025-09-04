@@ -6,29 +6,44 @@
     margin-bottom: 15px;
 }
 
-.tecnologias-lista {
+.habs ul {
     display: flex;
-    flex-wrap: nowrap; /* en tu inline estaba "no-wrap" */
+    flex-wrap: nowrap;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 1rem;
     list-style: none;
+    padding: 20px;
     padding-bottom: 30px;
     overflow-x: auto;
     max-width: 200vw;
 }  
-.tecnologia-item {
+.habs ul li{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    border: 1px solid #888;
-    border-radius: 5px;
+    border: 1px solid #8888;
+    border-radius: 10px;
     width: 80px;
     height: 70px;
     text-align: center;
     overflow-wrap: break-word; /* reemplazo de textWrap */
 }  
 .habs .tec{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
     width: 80px;
+}
+.habs .tec i {
+    font-size: 2rem;
+}
+
+.habs ul li:hover{
+    box-shadow: 0 0 10px #a89fe9;
+}
+.habs ul li>a:active{
+    box-shadow: 0 0 10px #a89fe977;
+    text-shadow: 2px 2px 5px gray;
 }

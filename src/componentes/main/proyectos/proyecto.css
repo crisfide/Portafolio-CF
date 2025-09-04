@@ -20,7 +20,7 @@
     padding: 1rem 0.5rem;
     height: 100%;
 }
-.proyecto-detalle ul li>*:hover{
+.proyecto-detalle ul li:hover{
     box-shadow: 0 0 10px #a89fe9;
 }
 .proyecto-detalle ul li>a:active{

@@ -28,25 +28,25 @@ const GridProyectos = ({proyectos}) => {
     <>
       <h2 className="mt">Proyectos en los que he trabajado</h2>
 
-      <div className="carrusel-container">
+      <section className="carrusel-container">
         <button className="btn-scroll" 
               onMouseDown={e => gridScroll(e, true)} 
               disabled={btnIzqDisabled ? "disabled" : null}
               >{"<"}</button>
 
-        <section className="carrusel" id="proyectos" onScroll={handleScroll}>
+        <div className="carrusel" id="proyectos" onScroll={handleScroll}>
           {
             proyectos.map( proyecto => (
               <ProyectoItem {...proyecto} key={proyecto.nombre} />)
             )
           }
-        </section>
+        </div>
 
         <button className="btn-scroll" 
               onMouseDown={e => gridScroll(e)} 
               disabled={btnDerDisabled ? "disabled" : null}
               >{">"}</button>
-      </div>
+      </section>
     </>
   )
 }
@@ -66,6 +66,8 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
 
   return (
     <article className="proyecto" style={estiloFondo}>
+      <h3>{nombre.replaceAll("_"," ")}</h3>
+
       <div className="transparente">
         <div>
           <div>
@@ -118,7 +120,6 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
 
         </div>
       </div>
-      <h3>{nombre.replaceAll("_"," ")}</h3>
 
 
     </article>
