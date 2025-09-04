@@ -1,17 +1,30 @@
 .perfil{
     display: flex;
     margin: auto;
+    align-items: center;
     max-width: 60vw;
+    height: calc(100vh - 60px);
+}
+.perfil h1{
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+.perfil h2{
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.perfil p{
+    white-space: pre-wrap;
 }
 .perfil figure{
     text-align: center;
 }
 .perfil img{
-    max-width: 200px;
+    max-width: 300px;
 }
-.perfil p{
-    white-space: pre-wrap;
-}
+
 
 
 

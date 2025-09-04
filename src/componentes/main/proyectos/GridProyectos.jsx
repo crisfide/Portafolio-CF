@@ -59,11 +59,11 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
         backgroundPosition: "top",
-        height: "100vh",
+        // height: "100vh",
     };
 
   return (
-    <div className="proyecto" style={estiloFondo}>
+    <article className="proyecto" style={estiloFondo}>
       <div className="transparente">
         <div>
           <h3>{nombre.replaceAll("_"," ")}</h3>
@@ -118,7 +118,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
         </div>
       </div>
 
-    </div>
+    </article>
   )
 }
 

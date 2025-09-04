@@ -1,20 +1,22 @@
 import './perfil.css'
 
-export const Perfil = ( {sobreMi:{titulo,descripcion}} ) => {
+export const Perfil = ( {sobreMi:{titulo, subtitulo, descripcion}} ) => {
   return (
     <section className="perfil">
-      <div>
+      <article>
         <h1>{titulo}</h1>
+        <h2>{subtitulo}</h2>
         <p>{descripcion}</p>
         <br />
         <a href="assets/cv_Christian_Fidelio.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
 
-      </div>
-      <div>
+      </article>
+      
+      <article>
         <figure>
           <img src="assets/fotoPerfil.jpg" alt="Foto de Christian Fidelio" loading="lazy" />
         </figure>
-      </div>
+      </article>
 
     </section>
   );
