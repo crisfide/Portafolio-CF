@@ -44,24 +44,30 @@
     text-align: center;
     padding: 0;
     position: relative;
+    overflow: hidden;
 }
 .carrusel .transparente{
     height: 100%;
     width: 100%;
-    background-color: #9a9898cc;
-    top: 0;
-    position: absolute;
+    background-color: #9a9898dd;
     overflow: hidden;
     display:flex;
     flex-direction: column;
     justify-content:space-evenly;
-    padding: 0px;
+    padding: 10px;
     box-sizing: border-box;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    
+    position: absolute;
+    top: 100%;
+    transition: top .5s ease-out;
+    /* , opacity 1s ease; */
 }
 .carrusel .transparente:hover{
     opacity: 1;
+}
+.proyecto:hover .transparente{
+    top: 0;
 }
 .proyecto h3{
     margin: 1rem auto;
@@ -132,18 +138,19 @@
     .carrusel{
         font-size: clamp(16px,3vh,25px);
     }
+    .carrusel .proyecto{
+        min-width: 85%;
+        min-height: 50vh;
+        max-height: 75vh;
+    }
     .carrusel .transparente{
         opacity: 1;
+
     }
     .carrusel-container{
         display: block;
     }
     .carrusel-container > .btn-scroll{
         display: none;
-    }
-    .carrusel .proyecto{
-        min-width: 85%;
-        min-height: 50vh;
-        max-height: 75vh;
     }
 }
