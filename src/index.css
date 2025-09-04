@@ -133,7 +133,7 @@ section{
         color: rgb(82, 220, 36);
         border-color: rgb(82, 220, 36);
     }
-    .dark .fa-brands,.dark .fa-solid{
+    .dark .btn .fa-brands,.dark .btn .fa-solid{
         /* color: white; */
         color: rgb(82, 220, 36);
     }
