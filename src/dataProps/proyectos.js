@@ -91,9 +91,9 @@ Alcance funcional:
 
 `,
     ["C#", ".NET", "Docker", "Bootstrap", "Git"],
-    null,
+    "https://estudioappcontable.somee.com",
     "https://github.com/CejasPablo/AppEstudioContable",
-    null
+    null,
   ),
 
   crearProyecto(

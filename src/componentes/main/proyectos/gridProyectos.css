@@ -65,6 +65,9 @@
 }
 .proyecto h3{
     margin: 1rem auto;
+    margin-top: 0;
+    padding: 10px 2px;
+    background-color: #dddd;
 }
 .proyecto ul{
     margin: 20px 0 0 0;
@@ -118,6 +121,10 @@
 
 .dark .carrusel-container > .btn-scroll{
     color: white;
+}
+
+.dark .proyecto h3{
+    background-color: #223c;
 }
 
 

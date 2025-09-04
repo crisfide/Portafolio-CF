@@ -57,8 +57,9 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
 
   const estiloFondo = {
         backgroundImage: `url(${img})`,
-        backgroundSize: "cover",
-        backgroundPosition: "top",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
         // height: "100vh",
     };
 
@@ -66,7 +67,6 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
     <article className="proyecto" style={estiloFondo}>
       <div className="transparente">
         <div>
-          <h3>{nombre.replaceAll("_"," ")}</h3>
           <div>
             <p><small>{resumen}</small></p>
             <Link to={`/proyectos/${nombre}`} className="btn">+ detalles</Link>
@@ -117,6 +117,8 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
 
         </div>
       </div>
+      <h3>{nombre.replaceAll("_"," ")}</h3>
+
 
     </article>
   )
