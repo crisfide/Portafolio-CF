@@ -1,21 +1,21 @@
 
 
 export const tecnologias = [
-    "PHP",
-    "Laravel",
+    ".NET",
+    "C#",
     "React",
+    "JavaScript",
+    "Laravel",
+    "PHP",
     "MySQL",
     "Tailwind CSS",
-    "OAuth2",
-    "Git",
-    "C#",
-    ".NET",
-    "Docker",
     "Bootstrap",
-    "Kotlin",
+    "Git",
+    "Docker",
     "Android",
-    "JavaScript",
-    "Azure",
+    "Kotlin",
     "Java",
+    "Azure",
+    "OAuth2",
     "Tomcat"
 ];

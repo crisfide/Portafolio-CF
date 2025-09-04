@@ -1,0 +1,34 @@
+.habs {
+    margin: 20px 0;
+}
+.habs h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tecnologias-lista {
+    display: flex;
+    flex-wrap: nowrap; /* en tu inline estaba "no-wrap" */
+    justify-content: space-evenly;
+    gap: 10px;
+    list-style: none;
+    padding-bottom: 30px;
+    overflow-x: auto;
+    max-width: 200vw;
+}  
+.tecnologia-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80px;
+    height: 70px;
+    text-align: center;
+    overflow-wrap: break-word; /* reemplazo de textWrap */
+}  
+.habs .tec{
+    display: block;
+    width: 80px;
+}

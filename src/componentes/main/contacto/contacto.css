@@ -11,3 +11,8 @@ main.contacto{
     border-color: var(--color-linkedin);
     margin: auto;
 }
+
+.btn.linkedin .fa-brands{
+    margin-right: 0.5rem;
+    color: white;
+}
