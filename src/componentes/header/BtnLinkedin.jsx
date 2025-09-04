@@ -4,11 +4,9 @@ const BtnLinkedin = () => {
   const linkLinkedin = redesSociales.find(r=>r.txt==="Linkedin").ruta
 
   return (
-    <button className="btn-nav-linkedin" aria-label="Ir a mi perfil de Linkedin">
-      <a href={linkLinkedin} target="_blank" rel="noopener noreferrer">
-        <i className="fa-brands fa-linkedin"></i>
-      </a>
-    </button>
+    <a className="btn" aria-label="Ir a mi perfil de Linkedin" href={linkLinkedin} target="_blank" rel="noopener noreferrer">
+      <i className="fa-brands fa-linkedin-in"></i>
+    </a>
   )
 }
 

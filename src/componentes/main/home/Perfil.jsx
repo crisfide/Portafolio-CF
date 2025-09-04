@@ -1,3 +1,4 @@
+import BtnLinkedin from '../../header/BtnLinkedin';
 import './perfil.css'
 
 export const Perfil = ( {sobreMi:{titulo, subtitulo, descripcion}} ) => {
@@ -8,7 +9,11 @@ export const Perfil = ( {sobreMi:{titulo, subtitulo, descripcion}} ) => {
         <h2>{subtitulo}</h2>
         <p>{descripcion}</p>
         <br />
-        <a href="assets/cv_Christian_Fidelio.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
+        <div className='gap-10'>
+          <a href="assets/cv_Christian_Fidelio.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
+          <BtnLinkedin />
+        </div>
+
 
       </article>
       

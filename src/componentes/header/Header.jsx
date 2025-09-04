@@ -11,7 +11,7 @@ const Header = () => {
       <nav>
         <NavMenu items={itemsMenu} />
         
-        <BtnLinkedin />
+        {/* <BtnLinkedin /> */}
         <BtnThemeSwitch />
       </nav>
     </header>
