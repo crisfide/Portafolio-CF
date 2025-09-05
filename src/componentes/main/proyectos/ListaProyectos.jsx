@@ -9,7 +9,7 @@ import '../../iconos.css'
 const ListaProyectos = ({proyectos}) => {
   return (
     <main>
-      <h2>Mis proyectos</h2>
+      <h2 className="center">Mis proyectos</h2>
       <section className="cards">
         {
           proyectos.map(proyecto => (
