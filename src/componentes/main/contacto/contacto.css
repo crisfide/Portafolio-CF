@@ -19,7 +19,7 @@ main.contacto{
     width: 100%;
     box-sizing: border-box;
 }
-.contacto-contenedor .btn, .btn.linkedin>*{
+.contacto-contenedor .btn, .contacto-contenedor .btn>*, .btn.linkedin>*{
     color: white;
 }
 .btn.linkedin{
@@ -27,11 +27,6 @@ main.contacto{
 }
 .btn-mail{
     background-color: var(--color-outlook);
-}
-
-.contacto .btn .fa-brands,.contacto .btn .fa-solid{
-    margin-right: 0.5rem;
-    color: white;
 }
 
 

@@ -73,6 +73,10 @@ section:last-child{
     display: flex;
     gap: 10px;
 }
+.btn{
+    display: flex;
+    gap: 0.5rem;
+}
 .btn, .btn-action{
     text-decoration: none;
     padding: 10px;
