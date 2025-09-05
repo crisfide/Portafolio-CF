@@ -64,7 +64,7 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
         <div>
           <div>
             <p><small>{resumen}</small></p>
-            <Link to={`/proyectos/${nombre}`} className="btn">+ detalles</Link>
+            <Link to={`/proyectos/${nombre}`} className="btn-action">+ detalles</Link>
           </div>
         </div>
 

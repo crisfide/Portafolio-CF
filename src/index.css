@@ -73,23 +73,25 @@ section:last-child{
     display: flex;
     gap: 10px;
 }
-.btn{
+.btn, .btn-action{
     text-decoration: none;
-    color: green;
-    border: 1px solid green;
     padding: 10px;
     border-radius: 15%;
+}
+.btn-action{
+    color: green;
+    border: 1px solid green;
     
 }
-.btn .fa-brands, .btn .fa-solid{
+.btn-action .fa-brands, .btn-action .fa-solid{
     color: green;
 }
-.btn:hover{
+.btn-action:hover{
     background-color: rgb(0, 73, 0);
     color: white;
 
 }
-.btn:hover .fa-brands, .btn:hover .fa-solid{
+.btn-action:hover .fa-brands, .btn-action:hover .fa-solid{
     color: white;
 }
 
@@ -132,16 +134,16 @@ section:last-child{
     .dark header, .dark .carrusel .transparente{
         background-color: #282832cc;
     }
-    .dark .btn{
+    .dark .btn-action{
         color: rgb(82, 220, 36);
         border-color: rgb(82, 220, 36);
     }
-    .dark .btn .fa-brands,.dark .btn .fa-solid{
+    .dark .btn-action .fa-brands,.dark .btn-action .fa-solid{
         /* color: white; */
         color: rgb(82, 220, 36);
     }
     
-    .dark .btn:hover .fa-brands,.dark .btn:hover .fa-solid{
+    .dark .btn-action:hover .fa-brands,.dark .btn-action:hover .fa-solid{
         color: rgb(82, 220, 36);
     }
     .dark::-webkit-scrollbar-track, .dark ::-webkit-scrollbar-track {

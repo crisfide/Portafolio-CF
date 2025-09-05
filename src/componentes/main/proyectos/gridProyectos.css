@@ -138,9 +138,6 @@
 .dark .carrusel .proyecto{
     background-color: #a89fe955;
 }
-.dark .carrusel .transparente{
-    background-color: #9a9898dd;
-}
 .dark .proyecto h3{
     background-color: #223c;
 }
@@ -152,8 +149,6 @@
     }
     .carrusel .proyecto{
         min-width: 85%;
-        min-height: 50vh;
-        max-height: 75vh;
     }
     .carrusel .transparente{
         opacity: 1;

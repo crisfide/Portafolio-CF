@@ -1,18 +1,43 @@
 :root {
-    --color-linkedin: #0A66C2;
-  }
+    --color-linkedin: #0077B5;
+    --color-outlook: #0078d4;
+}
 
 main.contacto{
     display: flex;
 }
-.btn.linkedin, .btn.linkedin>*{
-    background-color: var(--color-linkedin);
-    color: white;
-    border-color: var(--color-linkedin);
+.contacto-contenedor{
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 200px;
+}
+.contacto-contenedor .btn{
+    width: 100%;
+    box-sizing: border-box;
+}
+.contacto-contenedor .btn, .btn.linkedin>*{
+    color: white;
+}
+.btn.linkedin{
+    background-color: var(--color-linkedin);
+}
+.btn-mail{
+    background-color: var(--color-outlook);
 }
 
-.btn.linkedin .fa-brands{
+.contacto .btn .fa-brands,.contacto .btn .fa-solid{
     margin-right: 0.5rem;
     color: white;
+}
+
+
+@media screen and (max-width: 800px) {
+    .contacto-contenedor{
+        width: 60%;
+    }
+    
 }
