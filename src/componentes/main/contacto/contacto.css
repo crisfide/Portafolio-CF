@@ -32,7 +32,7 @@ main.contacto{
 
 @media screen and (max-width: 800px) {
     .contacto-contenedor{
-        width: 60%;
+        width: 80%;
     }
     
 }
