@@ -55,18 +55,10 @@ const ProyectoItem = ({nombre, resumen, tecnologias, linkWeb, linkGithub, linkYo
   const { darkMode } = useContext(DarkContext)
   const img = useThemeImg(nombre,darkMode)
 
-  const estiloFondo = {
-        backgroundImage: `url(${img})`,
-        backgroundSize: "contain",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundColor: darkMode ? "#a89fe955" : "#fff",
-        // height: "100vh",
-    };
-
   return (
-    <article className="proyecto" style={estiloFondo}>
+    <article className="proyecto">
       <h3>{nombre.replaceAll("_"," ")}</h3>
+      <img src={img} alt={"imagen " + nombre} className="img-proyecto" />
 
       <div className="transparente">
         <div>

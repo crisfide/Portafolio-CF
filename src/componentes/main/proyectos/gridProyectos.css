@@ -33,6 +33,7 @@
     gap: 50px;
     overflow-x: auto;
     scroll-behavior: smooth;
+    padding-bottom: 30px;
 }
 .carrusel .proyecto{
     min-width: 300px;
@@ -45,11 +46,17 @@
     padding: 40px 0 0 0;
     position: relative;
     overflow: hidden;
+    background-color: #fff;
+}
+.carrusel .proyecto .img-proyecto{
+    object-fit: contain;
+    width: 90%;
+    padding: 5%;
 }
 .carrusel .transparente{
     height: 100%;
     width: 100%;
-    background-color: #9a9898dd;
+    background-color: #ebe8e8ee;
     overflow: hidden;
     display:flex;
     flex-direction: column;
@@ -128,7 +135,12 @@
 .dark .carrusel-container > .btn-scroll{
     color: white;
 }
-
+.dark .carrusel .proyecto{
+    background-color: #a89fe955;
+}
+.dark .carrusel .transparente{
+    background-color: #9a9898dd;
+}
 .dark .proyecto h3{
     background-color: #223c;
 }
