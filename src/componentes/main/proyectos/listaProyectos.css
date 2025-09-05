@@ -43,3 +43,23 @@
     justify-content: start;
     gap: 10px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .cols{
+        flex-direction: column;
+    }
+    .card{
+        height: auto;
+    }
+    .card .col{
+        align-items: center;
+    }
+    .card .img img{
+        width: 80%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: top center;
+    }
+    
+}

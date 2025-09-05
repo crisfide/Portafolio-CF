@@ -51,7 +51,8 @@
 .carrusel .proyecto .img-proyecto{
     object-fit: contain;
     width: 90%;
-    padding: 5%;
+    padding: 0 5%;
+    min-height: 80%;
 }
 .carrusel .transparente{
     height: 100%;
@@ -70,6 +71,9 @@
     transition: top .5s ease-out;
     /* , opacity 1s ease; */
 }
+.carrusel .proyecto img{
+    min-height: 90%;
+}
 .carrusel .transparente:hover{
     opacity: 1;
 }
@@ -81,6 +85,8 @@
     margin-top: -40px;	
     padding: 10px 2px;
     background-color: #dddd;
+    position: absolute;
+    width: 100%;
 }
 .proyecto ul{
     margin: 20px 0 0 0;
