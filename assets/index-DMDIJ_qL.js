@@ -155,7 +155,7 @@ El trabajo fomentó la colaboración y la aplicación de conceptos clave, como l
 
 
   
-Tecnologías usadas: Backend en Java, Frontend en HTML/CSS/JS, servidor Apache Tomcat.`,["Java","Tomcat","Bootstrap","Git"],null,"https://github.com/crisfide/CarritoTP-UNLZ",null)],zv={backend:["C#",".NET","PHP","Laravel","MySQL","Java"],frontend:["JavaScript","React","Astro","HTML","CSS","Tailwind CSS","Bootstrap"],mobile:["Android","Kotlin","Java"],otros:["Azure","Git","Docker","OAuth2"]},Rv={titulo:"Hola, soy Christian",subtitulo:"Desarrollador Full Stack",descripcion:`Soy un apasionado por construir soluciones tecnológicas que generen impacto real en los negocios. Me especializo en integración de sistemas críticos, aplicaciones web escalables y en transformar procesos complejos en herramientas simples y efectivas.
+Tecnologías usadas: Backend en Java, Frontend en HTML/CSS/JS, servidor Apache Tomcat.`,["Java","Tomcat","Bootstrap","Git"],null,"https://github.com/crisfide/CarritoTP-UNLZ",null)],zv={backend:["C#",".NET","PHP","Laravel","MySQL","Java","Supabase"],frontend:["JavaScript","React","Astro","HTML","CSS","Tailwind CSS","Bootstrap"],mobile:["Android","Kotlin","Java"],otros:["Azure","Git","Docker","OAuth2"]},Rv={titulo:"Hola, soy Christian",subtitulo:"Desarrollador Full Stack",descripcion:`Soy un apasionado por construir soluciones tecnológicas que generen impacto real en los negocios. Me especializo en integración de sistemas críticos, aplicaciones web escalables y en transformar procesos complejos en herramientas simples y efectivas.
     
 Tecnologías clave: .NET, C#, React, Laravel, SQL Server, APIs REST, Git
 
