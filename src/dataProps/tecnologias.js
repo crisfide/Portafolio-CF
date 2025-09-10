@@ -1,21 +1,42 @@
 
 
-export const tecnologias = [
-    ".NET",
-    "C#",
-    "React",
-    "JavaScript",
-    "Laravel",
-    "PHP",
-    "MySQL",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Git",
-    "Docker",
-    "Android",
-    "Kotlin",
-    "Java",
-    "Azure",
-    "OAuth2",
-    "Tomcat"
-];
+export const tecnologias = {
+    backend: [
+        "C#",
+        ".NET",
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Java",
+        "Supabase",
+    ],
+
+    frontend: [
+        "JavaScript",
+        "React",
+        "Astro",
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "Bootstrap",
+        
+
+    ],
+
+    mobile: [
+        "Android",
+        "Kotlin",
+        "Java",
+
+    ],
+
+    otros: [
+        "Azure",
+
+        "Git",
+        "Docker",
+    
+        "OAuth2",
+        // "Tomcat"            
+    ],
+}
