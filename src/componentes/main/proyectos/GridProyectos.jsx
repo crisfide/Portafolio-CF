@@ -8,11 +8,12 @@ import '../../iconos.css'
 
 const gridScroll = (e, izq=false) => {
   const px = izq ? -350 : 350
+  const proyectos = document.getElementById("proyectos")
   proyectos.scroll(proyectos.scrollLeft + px, 0)
 }
 
 
-const GridProyectos = ({proyectos}) => {
+const GridProyectos = ({proyectos, verMas = false}) => {
   const [btnIzqDisabled, setBtnIzqDisabled] = useState(true);
   const [btnDerDisabled, setBtnDerDisabled] = useState(false);
   
@@ -28,25 +29,39 @@ const GridProyectos = ({proyectos}) => {
     <>
       <h2 className="mt">Proyectos en los que he trabajado</h2>
 
-      <section className="carrusel-container">
-        <button className="btn-scroll" 
-              onMouseDown={e => gridScroll(e, true)} 
-              disabled={btnIzqDisabled ? "disabled" : null}
-              >{"<"}</button>
+      <section className="">
+        <div className="carrusel-container">
 
-        <div className="carrusel" id="proyectos" onScroll={handleScroll}>
-          {
-            proyectos.map( proyecto => (
-              <ProyectoItem {...proyecto} key={proyecto.nombre} />)
-            )
-          }
+          <button className="btn-scroll" 
+                onMouseDown={e => gridScroll(e, true)} 
+                disabled={btnIzqDisabled ? "disabled" : null}
+                >{"<"}</button>
+
+          <div className="carrusel" id="proyectos" onScroll={handleScroll}>
+            {
+              proyectos.map( proyecto => (
+                <ProyectoItem {...proyecto} key={proyecto.nombre} />)
+              )
+            }
+          </div>
+
+          <button className="btn-scroll" 
+                onMouseDown={e => gridScroll(e)} 
+                disabled={btnDerDisabled ? "disabled" : null}
+                >{">"}</button>
         </div>
 
-        <button className="btn-scroll" 
-              onMouseDown={e => gridScroll(e)} 
-              disabled={btnDerDisabled ? "disabled" : null}
-              >{">"}</button>
+
+        { verMas &&
+          <div className="ver-mas">
+            <Link to="/proyectos" className="btn-action">
+              Ver más proyectos
+              <i className="fa-solid fa-arrow-right"></i>
+            </Link>
+          </div>
+        }
       </section>
+
     </>
   )
 }

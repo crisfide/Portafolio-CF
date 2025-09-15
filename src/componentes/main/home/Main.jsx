@@ -10,7 +10,7 @@ const Main = () => {
     <main>
       <Perfil sobreMi={sobreMi} />
       <Habilidades tecnologias={tecnologias} />
-      <GridProyectos proyectos={proyectos} />
+      <GridProyectos proyectos={proyectos} verMas={true} />
     </main>
   )
 }
